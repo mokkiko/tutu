@@ -1,0 +1,17 @@
+<%= form_with(model: railway_station) do |form| %>
+  <%= render 'common/errors', resource: @railway_station %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :year_foundation %>
+    <%= form.number_field :year_foundation %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
