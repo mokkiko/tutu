@@ -8945,3 +8945,251 @@ Processing by RoutesController#index as HTML
 Completed 200 OK in 15ms (Views: 13.0ms | ActiveRecord: 0.3ms | Allocations: 4873)
 
 
+Started GET "/routes" for 127.0.0.1 at 2022-05-21 17:34:44 +0300
+Processing by RoutesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering routes/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/routes/index.html.erb:14
+  [1m[36mRoute Load (0.3ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  ↳ app/views/routes/index.html.erb:14
+  Rendered routes/index.html.erb within layouts/application (Duration: 15.8ms | Allocations: 4705)
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | Allocations: 4769)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 1.0ms | Allocations: 5850)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"routes", :id=>nil}, missing required keys: [:id]):
+    15:       <tr>
+    16:        <td><%= route.name %></td>
+    17:        <td><%= link_to 'Show', route%></td>
+    18:        <td><%= link_to 'Редактировать', edit_route_path(@route) %></td>
+    19:        <td><%= link_to 'Destroy', route, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    20:        <br>
+    21:       </tr>
+  
+app/views/routes/index.html.erb:18
+app/views/routes/index.html.erb:14
+Started GET "/rails/info/routes" for 127.0.0.1 at 2022-05-21 17:34:55 +0300
+Processing by Rails::InfoController#routes as HTML
+  Rendering layout /home/maibenben/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/railties-6.1.5.1/lib/rails/templates/layouts/application.html.erb
+  Rendering /home/maibenben/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/railties-6.1.5.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /home/maibenben/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/actionpack-6.1.5.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [52 times] (Duration: 14.8ms | Allocations: 5822)
+  Rendered /home/maibenben/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/actionpack-6.1.5.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 3.1ms | Allocations: 884)
+  Rendered /home/maibenben/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/railties-6.1.5.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 27.2ms | Allocations: 11745)
+  Rendered layout /home/maibenben/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/railties-6.1.5.1/lib/rails/templates/layouts/application.html.erb (Duration: 29.0ms | Allocations: 11964)
+Completed 200 OK in 34ms (Views: 31.2ms | ActiveRecord: 0.0ms | Allocations: 13137)
+
+
+Started GET "/routes" for 127.0.0.1 at 2022-05-21 17:35:20 +0300
+Processing by RoutesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering routes/index.html.erb within layouts/application
+  [1m[36mRoute Load (0.3ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  ↳ app/views/routes/index.html.erb:14
+  Rendered routes/index.html.erb within layouts/application (Duration: 8.2ms | Allocations: 2524)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 2727)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.3ms | Allocations: 4310)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"routes"}, missing required keys: [:id]
+Did you mean?  edit_route_url):
+    15:       <tr>
+    16:        <td><%= route.name %></td>
+    17:        <td><%= link_to 'Show', route%></td>
+    18:        <td><%= link_to 'Редактировать', edit_route_path %></td>
+    19:        <td><%= link_to 'Destroy', route, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    20:        <br>
+    21:       </tr>
+  
+app/views/routes/index.html.erb:18
+app/views/routes/index.html.erb:14
+Started GET "/routes" for 127.0.0.1 at 2022-05-21 17:36:03 +0300
+Processing by RoutesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering routes/index.html.erb within layouts/application
+  [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  ↳ app/views/routes/index.html.erb:14
+  Rendered routes/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 1668)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+warning ../../../package.json: No license field
+node:internal/crypto/hash:67
+  this[kHandle] = new _Hash(algorithm, xofLen);
+                  ^
+
+Error: error:0308010C:digital envelope routines::unsupported
+    at new Hash (node:internal/crypto/hash:67:19)
+    at Object.createHash (node:crypto:135:10)
+    at module.exports (/home/maibenben/robomax/think/tutu/node_modules/webpack/lib/util/createHash.js:135:53)
+    at NormalModule._initBuildHash (/home/maibenben/robomax/think/tutu/node_modules/webpack/lib/NormalModule.js:417:16)
+    at handleParseError (/home/maibenben/robomax/think/tutu/node_modules/webpack/lib/NormalModule.js:471:10)
+    at /home/maibenben/robomax/think/tutu/node_modules/webpack/lib/NormalModule.js:503:5
+    at /home/maibenben/robomax/think/tutu/node_modules/webpack/lib/NormalModule.js:358:12
+    at /home/maibenben/robomax/think/tutu/node_modules/loader-runner/lib/LoaderRunner.js:373:3
+    at iterateNormalLoaders (/home/maibenben/robomax/think/tutu/node_modules/loader-runner/lib/LoaderRunner.js:214:10)
+    at iterateNormalLoaders (/home/maibenben/robomax/think/tutu/node_modules/loader-runner/lib/LoaderRunner.js:221:10)
+    at /home/maibenben/robomax/think/tutu/node_modules/loader-runner/lib/LoaderRunner.js:236:3
+    at context.callback (/home/maibenben/robomax/think/tutu/node_modules/loader-runner/lib/LoaderRunner.js:111:13)
+    at /home/maibenben/robomax/think/tutu/node_modules/babel-loader/lib/index.js:59:71 {
+  opensslErrorStack: [ 'error:03000086:digital envelope routines::initialization error' ],
+  library: 'digital envelope routines',
+  reason: 'unsupported',
+  code: 'ERR_OSSL_EVP_UNSUPPORTED'
+}
+
+Node.js v17.4.0
+
+  Rendered layout layouts/application.html.erb (Duration: 2831.6ms | Allocations: 6136)
+Completed 200 OK in 2839ms (Views: 2835.2ms | ActiveRecord: 0.2ms | Allocations: 7240)
+
+
+Started GET "/routes/3/edit" for 127.0.0.1 at 2022-05-21 17:36:09 +0300
+Processing by RoutesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mRoute Load (0.4ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/routes_controller.rb:44:in `set_route'
+  Rendering layout layouts/application.html.erb
+  Rendering routes/edit.html.erb within layouts/application
+  Rendered common/_errors.html.erb (Duration: 0.7ms | Allocations: 207)
+  Rendered routes/_form.html.erb (Duration: 6.1ms | Allocations: 1292)
+  Rendered routes/edit.html.erb within layouts/application (Duration: 7.8ms | Allocations: 1648)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.8ms | Allocations: 4707)
+Completed 200 OK in 20ms (Views: 15.8ms | ActiveRecord: 0.4ms | Allocations: 5785)
+
+
+Started GET "/routes" for 127.0.0.1 at 2022-05-21 17:36:11 +0300
+Processing by RoutesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering routes/index.html.erb within layouts/application
+  [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  ↳ app/views/routes/index.html.erb:14
+  Rendered routes/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 1445)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 4503)
+Completed 200 OK in 15ms (Views: 13.2ms | ActiveRecord: 0.2ms | Allocations: 4898)
+
+
+Started GET "/routes/11/edit" for 127.0.0.1 at 2022-05-21 17:36:12 +0300
+Processing by RoutesController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mRoute Load (0.4ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/routes_controller.rb:44:in `set_route'
+  Rendering layout layouts/application.html.erb
+  Rendering routes/edit.html.erb within layouts/application
+  Rendered common/_errors.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered routes/_form.html.erb (Duration: 1.9ms | Allocations: 729)
+  Rendered routes/edit.html.erb within layouts/application (Duration: 2.3ms | Allocations: 845)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 3902)
+Completed 200 OK in 14ms (Views: 8.8ms | ActiveRecord: 0.4ms | Allocations: 4828)
+
+
+Started GET "/routes" for 127.0.0.1 at 2022-05-21 17:36:14 +0300
+Processing by RoutesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering routes/index.html.erb within layouts/application
+  [1m[36mRoute Load (0.3ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  ↳ app/views/routes/index.html.erb:14
+  Rendered routes/index.html.erb within layouts/application (Duration: 6.3ms | Allocations: 1457)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 4515)
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.3ms | Allocations: 4909)
+
+
+Started GET "/routes/11/edit" for 127.0.0.1 at 2022-05-21 17:36:16 +0300
+Processing by RoutesController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mRoute Load (0.3ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/routes_controller.rb:44:in `set_route'
+  Rendering layout layouts/application.html.erb
+  Rendering routes/edit.html.erb within layouts/application
+  Rendered common/_errors.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered routes/_form.html.erb (Duration: 2.5ms | Allocations: 727)
+  Rendered routes/edit.html.erb within layouts/application (Duration: 3.6ms | Allocations: 843)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 3900)
+Completed 200 OK in 17ms (Views: 12.2ms | ActiveRecord: 0.3ms | Allocations: 4826)
+
+
+Started GET "/routes/11/edit" for 127.0.0.1 at 2022-05-21 17:37:09 +0300
+Processing by RoutesController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mRoute Load (0.4ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/routes_controller.rb:44:in `set_route'
+  Rendering layout layouts/application.html.erb
+  Rendering routes/edit.html.erb within layouts/application
+  Rendered common/_errors.html.erb (Duration: 0.8ms | Allocations: 206)
+  Rendered routes/_form.html.erb (Duration: 4.8ms | Allocations: 1370)
+  Rendered routes/edit.html.erb within layouts/application (Duration: 6.8ms | Allocations: 1728)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 4997)
+Completed 200 OK in 23ms (Views: 16.3ms | ActiveRecord: 0.4ms | Allocations: 6634)
+
+
+Started GET "/routes/11/edit" for 127.0.0.1 at 2022-05-21 17:37:37 +0300
+Processing by RoutesController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mRoute Load (0.3ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/routes_controller.rb:44:in `set_route'
+  Rendering layout layouts/application.html.erb
+  Rendering routes/edit.html.erb within layouts/application
+  Rendered common/_errors.html.erb (Duration: 0.8ms | Allocations: 207)
+  Rendered routes/_form.html.erb (Duration: 5.2ms | Allocations: 1339)
+  Rendered routes/edit.html.erb within layouts/application (Duration: 6.7ms | Allocations: 1694)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 4949)
+Completed 200 OK in 20ms (Views: 15.3ms | ActiveRecord: 0.3ms | Allocations: 6580)
+
+
+Started PATCH "/routes/11" for 127.0.0.1 at 2022-05-21 17:37:53 +0300
+Processing by RoutesController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "route"=>{"name"=>"rr4dd"}, "commit"=>"Изменить", "id"=>"11"}
+  [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/routes_controller.rb:44:in `set_route'
+Redirected to http://localhost:3000/routes/11
+Completed 302 Found in 6ms (ActiveRecord: 0.2ms | Allocations: 1220)
+
+
+Started GET "/routes/11" for 127.0.0.1 at 2022-05-21 17:37:53 +0300
+Processing by RoutesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/routes_controller.rb:44:in `set_route'
+  Rendering layout layouts/application.html.erb
+  Rendering routes/show.html.erb within layouts/application
+  Rendered routes/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 261)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 3517)
+Completed 200 OK in 15ms (Views: 9.9ms | ActiveRecord: 0.2ms | Allocations: 5151)
+
+
+Started GET "/routes" for 127.0.0.1 at 2022-05-21 17:37:55 +0300
+Processing by RoutesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering routes/index.html.erb within layouts/application
+  [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  ↳ app/views/routes/index.html.erb:14
+  Rendered routes/index.html.erb within layouts/application (Duration: 6.7ms | Allocations: 1666)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 4742)
+Completed 200 OK in 15ms (Views: 12.9ms | ActiveRecord: 0.2ms | Allocations: 5263)
+
+
+Started GET "/routes/2/edit" for 127.0.0.1 at 2022-05-21 17:37:56 +0300
+Processing by RoutesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRoute Load (0.5ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/routes_controller.rb:44:in `set_route'
+  Rendering layout layouts/application.html.erb
+  Rendering routes/edit.html.erb within layouts/application
+  Rendered common/_errors.html.erb (Duration: 0.9ms | Allocations: 206)
+  Rendered routes/_form.html.erb (Duration: 4.6ms | Allocations: 1161)
+  Rendered routes/edit.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1516)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 4575)
+Completed 200 OK in 18ms (Views: 11.4ms | ActiveRecord: 0.5ms | Allocations: 5628)
+
+
