@@ -9654,3 +9654,91 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.0ms | Allocations: 3692)
 
 
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddPositionToRailwayStationRoutes (20220529133240)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddPositionToRailwayStationRoutes (20220529133240)
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddPositionToRailwayStationRoutes (20220529133240)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddPositionToRailwayStationRoutes (20220529133240)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddPositionToRailwayStationRoutes (20220529133240)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "railway_stations_routes" ADD "position" integer[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220529133240"]]
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2022-05-29 16:39:59 +0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 488)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | Allocations: 6877)
+Completed 200 OK in 33ms (Views: 24.7ms | ActiveRecord: 0.0ms | Allocations: 9804)
+
+
+Started GET "/railway_stations" for 127.0.0.1 at 2022-05-29 16:40:01 +0300
+Processing by RailwayStationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering railway_stations/index.html.erb within layouts/application
+  [1m[36mRailwayStation Load (0.3ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations"[0m
+  ↳ app/views/railway_stations/index.html.erb:15
+  Rendered railway_stations/index.html.erb within layouts/application (Duration: 13.0ms | Allocations: 4194)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.3ms | Allocations: 7373)
+Completed 200 OK in 31ms (Views: 21.4ms | ActiveRecord: 1.4ms | Allocations: 10685)
+
+
+Started GET "/railway_stations/1" for 127.0.0.1 at 2022-05-29 16:40:03 +0300
+Processing by RailwayStationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRailwayStation Load (0.4ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/railway_stations_controller.rb:63:in `set_railway_station'
+  Rendering layout layouts/application.html.erb
+  Rendering railway_stations/show.html.erb within layouts/application
+  [1m[36mRoute Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "routes" INNER JOIN "railway_stations_routes" ON "routes"."id" = "railway_stations_routes"."route_id" WHERE "railway_stations_routes"."railway_station_id" = ? LIMIT ?[0m  [["railway_station_id", 1], ["LIMIT", 1]]
+  ↳ app/views/railway_stations/show.html.erb:13
+  [1m[36mRoute Load (0.3ms)[0m  [1m[34mSELECT "routes".* FROM "routes" INNER JOIN "railway_stations_routes" ON "routes"."id" = "railway_stations_routes"."route_id" WHERE "railway_stations_routes"."railway_station_id" = ?[0m  [["railway_station_id", 1]]
+  ↳ app/views/railway_stations/show.html.erb:17
+  Rendered railway_stations/show.html.erb within layouts/application (Duration: 31.8ms | Allocations: 11435)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 37.2ms | Allocations: 14517)
+Completed 200 OK in 45ms (Views: 36.5ms | ActiveRecord: 1.7ms | Allocations: 15994)
+
+
+Started GET "/routes" for 127.0.0.1 at 2022-05-29 16:40:45 +0300
+Processing by RoutesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering routes/index.html.erb within layouts/application
+  [1m[36mRoute Load (0.3ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  ↳ app/views/routes/index.html.erb:14
+  Rendered routes/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1608)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 4747)
+Completed 200 OK in 16ms (Views: 14.2ms | ActiveRecord: 0.3ms | Allocations: 5688)
+
+
+Started GET "/routes/1" for 127.0.0.1 at 2022-05-29 16:40:47 +0300
+Processing by RoutesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoute Load (0.3ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/routes_controller.rb:44:in `set_route'
+  Rendering layout layouts/application.html.erb
+  Rendering routes/show.html.erb within layouts/application
+  Rendered routes/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 266)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 3445)
+Completed 200 OK in 17ms (Views: 10.7ms | ActiveRecord: 0.3ms | Allocations: 4620)
+
+
