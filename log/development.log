@@ -11103,3 +11103,817 @@ Processing by RoutesController#show as HTML
 Completed 200 OK in 19ms (Views: 13.7ms | ActiveRecord: 0.6ms | Allocations: 5172)
 
 
+Started GET "/" for 127.0.0.1 at 2022-06-04 10:28:10 +0300
+  [1m[35m (4.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 398)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.4ms | Allocations: 6296)
+Completed 200 OK in 42ms (Views: 30.1ms | ActiveRecord: 0.0ms | Allocations: 9150)
+
+
+Started GET "/routes" for 127.0.0.1 at 2022-06-04 10:29:38 +0300
+Processing by RoutesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering routes/index.html.erb within layouts/application
+  [1m[36mRoute Load (0.5ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  ↳ app/views/routes/index.html.erb:14
+  Rendered routes/index.html.erb within layouts/application (Duration: 10.5ms | Allocations: 3701)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.6ms | Allocations: 6840)
+Completed 200 OK in 25ms (Views: 16.2ms | ActiveRecord: 1.0ms | Allocations: 9722)
+
+
+Started GET "/routes/2" for 127.0.0.1 at 2022-06-04 10:29:40 +0300
+Processing by RoutesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRoute Load (0.3ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/routes_controller.rb:44:in `set_route'
+  Rendering layout layouts/application.html.erb
+  Rendering routes/show.html.erb within layouts/application
+  [1m[36mRailwayStation Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "railway_stations" INNER JOIN "railway_stations_routes" ON "railway_stations"."id" = "railway_stations_routes"."railway_station_id" WHERE "railway_stations_routes"."route_id" = ? LIMIT ?[0m  [["route_id", 2], ["LIMIT", 1]]
+  ↳ app/views/routes/show.html.erb:9
+  [1m[36mRailwayStation Load (0.3ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations" INNER JOIN "railway_stations_routes" ON "railway_stations"."id" = "railway_stations_routes"."railway_station_id" WHERE "railway_stations_routes"."route_id" = ?[0m  [["route_id", 2]]
+  ↳ app/views/routes/show.html.erb:21
+  Rendered routes/show.html.erb within layouts/application (Duration: 34.7ms | Allocations: 12731)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 41.3ms | Allocations: 15810)
+Completed 200 OK in 51ms (Views: 40.6ms | ActiveRecord: 1.9ms | Allocations: 17282)
+
+
+Started GET "/routes" for 127.0.0.1 at 2022-06-04 10:29:41 +0300
+Processing by RoutesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering routes/index.html.erb within layouts/application
+  [1m[36mRoute Load (0.4ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  ↳ app/views/routes/index.html.erb:14
+  Rendered routes/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1318)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 4493)
+Completed 200 OK in 15ms (Views: 13.2ms | ActiveRecord: 0.4ms | Allocations: 4899)
+
+
+Started GET "/routes/1" for 127.0.0.1 at 2022-06-04 10:29:42 +0300
+Processing by RoutesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/routes_controller.rb:44:in `set_route'
+  Rendering layout layouts/application.html.erb
+  Rendering routes/show.html.erb within layouts/application
+  [1m[36mRailwayStation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "railway_stations" INNER JOIN "railway_stations_routes" ON "railway_stations"."id" = "railway_stations_routes"."railway_station_id" WHERE "railway_stations_routes"."route_id" = ? LIMIT ?[0m  [["route_id", 1], ["LIMIT", 1]]
+  ↳ app/views/routes/show.html.erb:9
+  [1m[36mRailwayStation Load (0.1ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations" INNER JOIN "railway_stations_routes" ON "railway_stations"."id" = "railway_stations_routes"."railway_station_id" WHERE "railway_stations_routes"."route_id" = ?[0m  [["route_id", 1]]
+  ↳ app/views/routes/show.html.erb:21
+  Rendered routes/show.html.erb within layouts/application (Duration: 5.5ms | Allocations: 2182)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 5354)
+Completed 200 OK in 15ms (Views: 10.7ms | ActiveRecord: 0.5ms | Allocations: 6280)
+
+
+Started GET "/routes" for 127.0.0.1 at 2022-06-04 10:29:44 +0300
+Processing by RoutesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering routes/index.html.erb within layouts/application
+  [1m[36mRoute Load (0.3ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  ↳ app/views/routes/index.html.erb:14
+  Rendered routes/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 1315)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 4490)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.3ms | Allocations: 4895)
+
+
+Started GET "/routes" for 127.0.0.1 at 2022-06-04 10:30:06 +0300
+Processing by RoutesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering routes/index.html.erb within layouts/application
+  [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  ↳ app/views/routes/index.html.erb:14
+  Rendered routes/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1315)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 4490)
+Completed 200 OK in 14ms (Views: 11.9ms | ActiveRecord: 0.2ms | Allocations: 4892)
+
+
+Started GET "/routes/2" for 127.0.0.1 at 2022-06-04 10:30:08 +0300
+Processing by RoutesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/routes_controller.rb:44:in `set_route'
+  Rendering layout layouts/application.html.erb
+  Rendering routes/show.html.erb within layouts/application
+  [1m[36mRailwayStation Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "railway_stations" INNER JOIN "railway_stations_routes" ON "railway_stations"."id" = "railway_stations_routes"."railway_station_id" WHERE "railway_stations_routes"."route_id" = ? LIMIT ?[0m  [["route_id", 2], ["LIMIT", 1]]
+  ↳ app/views/routes/show.html.erb:9
+  [1m[36mRailwayStation Load (0.1ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations" INNER JOIN "railway_stations_routes" ON "railway_stations"."id" = "railway_stations_routes"."railway_station_id" WHERE "railway_stations_routes"."route_id" = ?[0m  [["route_id", 2]]
+  ↳ app/views/routes/show.html.erb:21
+  Rendered routes/show.html.erb within layouts/application (Duration: 6.3ms | Allocations: 2182)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 5354)
+Completed 200 OK in 19ms (Views: 13.7ms | ActiveRecord: 0.6ms | Allocations: 6281)
+
+
+Started GET "/routes" for 127.0.0.1 at 2022-06-04 10:30:09 +0300
+Processing by RoutesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering routes/index.html.erb within layouts/application
+  [1m[36mRoute Load (0.3ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  ↳ app/views/routes/index.html.erb:14
+  Rendered routes/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1307)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 4480)
+Completed 200 OK in 15ms (Views: 13.2ms | ActiveRecord: 0.3ms | Allocations: 4874)
+
+
+Started GET "/routes/1" for 127.0.0.1 at 2022-06-04 10:30:09 +0300
+Processing by RoutesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoute Load (0.4ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/routes_controller.rb:44:in `set_route'
+  Rendering layout layouts/application.html.erb
+  Rendering routes/show.html.erb within layouts/application
+  [1m[36mRailwayStation Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "railway_stations" INNER JOIN "railway_stations_routes" ON "railway_stations"."id" = "railway_stations_routes"."railway_station_id" WHERE "railway_stations_routes"."route_id" = ? LIMIT ?[0m  [["route_id", 1], ["LIMIT", 1]]
+  ↳ app/views/routes/show.html.erb:9
+  [1m[36mRailwayStation Load (0.1ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations" INNER JOIN "railway_stations_routes" ON "railway_stations"."id" = "railway_stations_routes"."railway_station_id" WHERE "railway_stations_routes"."route_id" = ?[0m  [["route_id", 1]]
+  ↳ app/views/routes/show.html.erb:21
+  Rendered routes/show.html.erb within layouts/application (Duration: 7.9ms | Allocations: 2182)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | Allocations: 5368)
+Completed 200 OK in 32ms (Views: 26.6ms | ActiveRecord: 1.0ms | Allocations: 6297)
+
+
+Started GET "/routes" for 127.0.0.1 at 2022-06-04 10:30:10 +0300
+Processing by RoutesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering routes/index.html.erb within layouts/application
+  [1m[36mRoute Load (0.5ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  ↳ app/views/routes/index.html.erb:14
+  Rendered routes/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 1307)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 4480)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.5ms | Allocations: 4874)
+
+
+Started GET "/routes/3" for 127.0.0.1 at 2022-06-04 10:30:11 +0300
+Processing by RoutesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mRoute Load (0.3ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/routes_controller.rb:44:in `set_route'
+  Rendering layout layouts/application.html.erb
+  Rendering routes/show.html.erb within layouts/application
+  [1m[36mRailwayStation Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "railway_stations" INNER JOIN "railway_stations_routes" ON "railway_stations"."id" = "railway_stations_routes"."railway_station_id" WHERE "railway_stations_routes"."route_id" = ? LIMIT ?[0m  [["route_id", 3], ["LIMIT", 1]]
+  ↳ app/views/routes/show.html.erb:9
+  Rendered routes/show.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1072)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 4245)
+Completed 200 OK in 16ms (Views: 11.4ms | ActiveRecord: 0.9ms | Allocations: 5171)
+
+
+Started GET "/routes" for 127.0.0.1 at 2022-06-04 10:30:14 +0300
+Processing by RoutesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering routes/index.html.erb within layouts/application
+  [1m[36mRoute Load (0.3ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  ↳ app/views/routes/index.html.erb:14
+  Rendered routes/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 1307)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 4480)
+Completed 200 OK in 16ms (Views: 13.7ms | ActiveRecord: 0.3ms | Allocations: 4874)
+
+
+Started GET "/routes/2/edit" for 127.0.0.1 at 2022-06-04 10:30:15 +0300
+Processing by RoutesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/routes_controller.rb:44:in `set_route'
+  Rendering layout layouts/application.html.erb
+  Rendering routes/edit.html.erb within layouts/application
+  Rendered common/_errors.html.erb (Duration: 0.8ms | Allocations: 213)
+  Rendered routes/_form.html.erb (Duration: 16.6ms | Allocations: 4691)
+  Rendered routes/edit.html.erb within layouts/application (Duration: 18.9ms | Allocations: 5055)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.7ms | Allocations: 8132)
+Completed 200 OK in 30ms (Views: 25.6ms | ActiveRecord: 0.2ms | Allocations: 9185)
+
+
+Started GET "/routes" for 127.0.0.1 at 2022-06-04 10:30:17 +0300
+Processing by RoutesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering routes/index.html.erb within layouts/application
+  [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  ↳ app/views/routes/index.html.erb:14
+  Rendered routes/index.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1312)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 4485)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.2ms | Allocations: 4880)
+
+
+Started GET "/routes/9" for 127.0.0.1 at 2022-06-04 10:30:18 +0300
+Processing by RoutesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mRoute Load (0.3ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/routes_controller.rb:44:in `set_route'
+  Rendering layout layouts/application.html.erb
+  Rendering routes/show.html.erb within layouts/application
+  [1m[36mRailwayStation Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "railway_stations" INNER JOIN "railway_stations_routes" ON "railway_stations"."id" = "railway_stations_routes"."railway_station_id" WHERE "railway_stations_routes"."route_id" = ? LIMIT ?[0m  [["route_id", 9], ["LIMIT", 1]]
+  ↳ app/views/routes/show.html.erb:9
+  Rendered routes/show.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1073)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 4246)
+Completed 200 OK in 18ms (Views: 11.8ms | ActiveRecord: 0.7ms | Allocations: 5173)
+
+
+Started GET "/" for 127.0.0.1 at 2022-06-04 10:30:19 +0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 135)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 3312)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.0ms | Allocations: 3691)
+
+
+Started GET "/trains" for 127.0.0.1 at 2022-06-04 10:30:21 +0300
+Processing by TrainsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering trains/index.html.erb within layouts/application
+  [1m[36mTrain Load (0.3ms)[0m  [1m[34mSELECT "trains".* FROM "trains"[0m
+  ↳ app/views/trains/index.html.erb:13
+  Rendered collection of trains/_train.html.erb [6 times] (Duration: 2.7ms | Allocations: 1084)
+  Rendered trains/index.html.erb within layouts/application (Duration: 15.0ms | Allocations: 4517)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 22.4ms | Allocations: 7656)
+Completed 200 OK in 32ms (Views: 23.6ms | ActiveRecord: 0.9ms | Allocations: 9468)
+
+
+Started GET "/trains/5/edit" for 127.0.0.1 at 2022-06-04 10:30:22 +0300
+Processing by TrainsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTrain Load (0.3ms)[0m  [1m[34mSELECT "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/trains_controller.rb:44:in `set_train'
+  Rendering layout layouts/application.html.erb
+  Rendering trains/edit.html.erb within layouts/application
+  Rendered common/_errors.html.erb (Duration: 0.2ms | Allocations: 42)
+  [1m[36mRailwayStation Load (0.4ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations"[0m
+  ↳ app/views/trains/_form.html.erb:11
+  Rendered trains/_form.html.erb (Duration: 9.8ms | Allocations: 2030)
+  Rendered trains/edit.html.erb within layouts/application (Duration: 12.1ms | Allocations: 2379)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.8ms | Allocations: 5562)
+Completed 200 OK in 25ms (Views: 18.4ms | ActiveRecord: 0.7ms | Allocations: 6718)
+
+
+Started PATCH "/trains/5" for 127.0.0.1 at 2022-06-04 10:30:27 +0300
+Processing by TrainsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "train"=>{"number"=>"111", "current_station_id"=>"1"}, "commit"=>"Изменить", "id"=>"5"}
+  [1m[36mTrain Load (0.2ms)[0m  [1m[34mSELECT "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/trains_controller.rb:44:in `set_train'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trains_controller.rb:29:in `update'
+  [1m[36mTrain Update (0.7ms)[0m  [1m[33mUPDATE "trains" SET "updated_at" = ?, "current_station_id" = ? WHERE "trains"."id" = ?[0m  [["updated_at", "2022-06-04 07:30:27.147629"], ["current_station_id", 1], ["id", 5]]
+  ↳ app/controllers/trains_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/trains_controller.rb:29:in `update'
+Redirected to http://localhost:3000/trains/5
+Completed 302 Found in 25ms (ActiveRecord: 4.0ms | Allocations: 4844)
+
+
+Started GET "/trains/5" for 127.0.0.1 at 2022-06-04 10:30:27 +0300
+Processing by TrainsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTrain Load (0.2ms)[0m  [1m[34mSELECT "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/trains_controller.rb:44:in `set_train'
+  Rendering layout layouts/application.html.erb
+  Rendering trains/show.html.erb within layouts/application
+  [1m[36mRailwayStation Load (0.3ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trains/show.html.erb:10
+  Rendered trains/show.html.erb within layouts/application (Duration: 8.4ms | Allocations: 2086)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 5171)
+Completed 200 OK in 20ms (Views: 14.9ms | ActiveRecord: 0.6ms | Allocations: 6216)
+
+
+Started GET "/trains" for 127.0.0.1 at 2022-06-04 10:30:29 +0300
+Processing by TrainsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering trains/index.html.erb within layouts/application
+  [1m[36mTrain Load (0.2ms)[0m  [1m[34mSELECT "trains".* FROM "trains"[0m
+  ↳ app/views/trains/index.html.erb:13
+  Rendered collection of trains/_train.html.erb [6 times] (Duration: 10.6ms | Allocations: 880)
+  Rendered trains/index.html.erb within layouts/application (Duration: 15.7ms | Allocations: 1761)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 22.6ms | Allocations: 4948)
+Completed 200 OK in 26ms (Views: 24.2ms | ActiveRecord: 0.2ms | Allocations: 5344)
+
+
+Started GET "/trains/1" for 127.0.0.1 at 2022-06-04 10:30:30 +0300
+Processing by TrainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrain Load (0.3ms)[0m  [1m[34mSELECT "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/trains_controller.rb:44:in `set_train'
+  Rendering layout layouts/application.html.erb
+  Rendering trains/show.html.erb within layouts/application
+  [1m[36mRailwayStation Load (0.2ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trains/show.html.erb:10
+  Rendered trains/show.html.erb within layouts/application (Duration: 3.5ms | Allocations: 866)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 4053)
+Completed 200 OK in 15ms (Views: 9.8ms | ActiveRecord: 0.5ms | Allocations: 4982)
+
+
+Started GET "/trains" for 127.0.0.1 at 2022-06-04 10:30:32 +0300
+Processing by TrainsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering trains/index.html.erb within layouts/application
+  [1m[36mTrain Load (0.2ms)[0m  [1m[34mSELECT "trains".* FROM "trains"[0m
+  ↳ app/views/trains/index.html.erb:13
+  Rendered collection of trains/_train.html.erb [6 times] (Duration: 1.4ms | Allocations: 878)
+  Rendered trains/index.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1758)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 4931)
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.2ms | Allocations: 5325)
+
+
+Started GET "/trains/2" for 127.0.0.1 at 2022-06-04 10:30:32 +0300
+Processing by TrainsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTrain Load (0.2ms)[0m  [1m[34mSELECT "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/trains_controller.rb:44:in `set_train'
+  Rendering layout layouts/application.html.erb
+  Rendering trains/show.html.erb within layouts/application
+  [1m[36mRailwayStation Load (0.2ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trains/show.html.erb:10
+  Rendered trains/show.html.erb within layouts/application (Duration: 4.3ms | Allocations: 866)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 4039)
+Completed 200 OK in 16ms (Views: 11.4ms | ActiveRecord: 0.4ms | Allocations: 4965)
+
+
+Started GET "/trains" for 127.0.0.1 at 2022-06-04 10:30:33 +0300
+Processing by TrainsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering trains/index.html.erb within layouts/application
+  [1m[36mTrain Load (0.5ms)[0m  [1m[34mSELECT "trains".* FROM "trains"[0m
+  ↳ app/views/trains/index.html.erb:13
+  Rendered collection of trains/_train.html.erb [6 times] (Duration: 2.0ms | Allocations: 878)
+  Rendered trains/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 1758)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 4931)
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 0.5ms | Allocations: 5325)
+
+
+Started GET "/trains/3" for 127.0.0.1 at 2022-06-04 10:30:34 +0300
+Processing by TrainsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTrain Load (0.2ms)[0m  [1m[34mSELECT "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/trains_controller.rb:44:in `set_train'
+  Rendering layout layouts/application.html.erb
+  Rendering trains/show.html.erb within layouts/application
+  [1m[36mRailwayStation Load (0.2ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/trains/show.html.erb:10
+  Rendered trains/show.html.erb within layouts/application (Duration: 3.8ms | Allocations: 866)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 4039)
+Completed 200 OK in 16ms (Views: 11.2ms | ActiveRecord: 0.4ms | Allocations: 4965)
+
+
+Started GET "/trains" for 127.0.0.1 at 2022-06-04 10:30:35 +0300
+Processing by TrainsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering trains/index.html.erb within layouts/application
+  [1m[36mTrain Load (0.3ms)[0m  [1m[34mSELECT "trains".* FROM "trains"[0m
+  ↳ app/views/trains/index.html.erb:13
+  Rendered collection of trains/_train.html.erb [6 times] (Duration: 1.3ms | Allocations: 878)
+  Rendered trains/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 1758)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 4931)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.3ms | Allocations: 5325)
+
+
+Started GET "/trains/5" for 127.0.0.1 at 2022-06-04 10:30:35 +0300
+Processing by TrainsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTrain Load (0.2ms)[0m  [1m[34mSELECT "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/trains_controller.rb:44:in `set_train'
+  Rendering layout layouts/application.html.erb
+  Rendering trains/show.html.erb within layouts/application
+  [1m[36mRailwayStation Load (0.3ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trains/show.html.erb:10
+  Rendered trains/show.html.erb within layouts/application (Duration: 5.0ms | Allocations: 866)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 4039)
+Completed 200 OK in 15ms (Views: 11.6ms | ActiveRecord: 0.5ms | Allocations: 4965)
+
+
+Started GET "/trains" for 127.0.0.1 at 2022-06-04 10:30:36 +0300
+Processing by TrainsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering trains/index.html.erb within layouts/application
+  [1m[36mTrain Load (0.3ms)[0m  [1m[34mSELECT "trains".* FROM "trains"[0m
+  ↳ app/views/trains/index.html.erb:13
+  Rendered collection of trains/_train.html.erb [6 times] (Duration: 2.7ms | Allocations: 878)
+  Rendered trains/index.html.erb within layouts/application (Duration: 8.0ms | Allocations: 1758)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 4931)
+Completed 200 OK in 18ms (Views: 16.3ms | ActiveRecord: 0.3ms | Allocations: 5326)
+
+
+Started GET "/trains/6" for 127.0.0.1 at 2022-06-04 10:30:37 +0300
+Processing by TrainsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTrain Load (0.3ms)[0m  [1m[34mSELECT "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/trains_controller.rb:44:in `set_train'
+  Rendering layout layouts/application.html.erb
+  Rendering trains/show.html.erb within layouts/application
+  Rendered trains/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 121)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 3294)
+Completed 200 OK in 13ms (Views: 8.3ms | ActiveRecord: 0.3ms | Allocations: 4221)
+
+
+Started GET "/trains/6/edit" for 127.0.0.1 at 2022-06-04 10:30:39 +0300
+Processing by TrainsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTrain Load (0.2ms)[0m  [1m[34mSELECT "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/trains_controller.rb:44:in `set_train'
+  Rendering layout layouts/application.html.erb
+  Rendering trains/edit.html.erb within layouts/application
+  Rendered common/_errors.html.erb (Duration: 0.2ms | Allocations: 42)
+  [1m[36mRailwayStation Load (0.2ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations"[0m
+  ↳ app/views/trains/_form.html.erb:11
+  Rendered trains/_form.html.erb (Duration: 5.4ms | Allocations: 1671)
+  Rendered trains/edit.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1787)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 4968)
+Completed 200 OK in 17ms (Views: 13.1ms | ActiveRecord: 0.4ms | Allocations: 5894)
+
+
+Started PATCH "/trains/6" for 127.0.0.1 at 2022-06-04 10:30:42 +0300
+Processing by TrainsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "train"=>{"number"=>"13", "current_station_id"=>"5"}, "commit"=>"Изменить", "id"=>"6"}
+  [1m[36mTrain Load (0.2ms)[0m  [1m[34mSELECT "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/trains_controller.rb:44:in `set_train'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trains_controller.rb:29:in `update'
+  [1m[36mTrain Update (0.6ms)[0m  [1m[33mUPDATE "trains" SET "updated_at" = ?, "current_station_id" = ? WHERE "trains"."id" = ?[0m  [["updated_at", "2022-06-04 07:30:42.404024"], ["current_station_id", 5], ["id", 6]]
+  ↳ app/controllers/trains_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/trains_controller.rb:29:in `update'
+Redirected to http://localhost:3000/trains/6
+Completed 302 Found in 19ms (ActiveRecord: 3.1ms | Allocations: 5166)
+
+
+Started GET "/trains/6" for 127.0.0.1 at 2022-06-04 10:30:42 +0300
+Processing by TrainsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTrain Load (0.2ms)[0m  [1m[34mSELECT "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/trains_controller.rb:44:in `set_train'
+  Rendering layout layouts/application.html.erb
+  Rendering trains/show.html.erb within layouts/application
+  [1m[36mRailwayStation Load (0.2ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/trains/show.html.erb:10
+  Rendered trains/show.html.erb within layouts/application (Duration: 3.9ms | Allocations: 866)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 4039)
+Completed 200 OK in 13ms (Views: 9.9ms | ActiveRecord: 0.3ms | Allocations: 4962)
+
+
+Started GET "/trains" for 127.0.0.1 at 2022-06-04 10:30:44 +0300
+Processing by TrainsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering trains/index.html.erb within layouts/application
+  [1m[36mTrain Load (0.3ms)[0m  [1m[34mSELECT "trains".* FROM "trains"[0m
+  ↳ app/views/trains/index.html.erb:13
+  Rendered collection of trains/_train.html.erb [6 times] (Duration: 1.9ms | Allocations: 878)
+  Rendered trains/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1758)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.9ms | Allocations: 4946)
+Completed 200 OK in 22ms (Views: 19.9ms | ActiveRecord: 0.3ms | Allocations: 5341)
+
+
+Started GET "/trains/7" for 127.0.0.1 at 2022-06-04 10:30:45 +0300
+Processing by TrainsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mTrain Load (0.2ms)[0m  [1m[34mSELECT "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/trains_controller.rb:44:in `set_train'
+  Rendering layout layouts/application.html.erb
+  Rendering trains/show.html.erb within layouts/application
+  [1m[36mRailwayStation Load (0.4ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trains/show.html.erb:10
+  Rendered trains/show.html.erb within layouts/application (Duration: 4.8ms | Allocations: 867)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 4054)
+Completed 200 OK in 16ms (Views: 11.9ms | ActiveRecord: 0.7ms | Allocations: 4981)
+
+
+Started GET "/trains/7/edit" for 127.0.0.1 at 2022-06-04 10:30:47 +0300
+Processing by TrainsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mTrain Load (0.2ms)[0m  [1m[34mSELECT "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/trains_controller.rb:44:in `set_train'
+  Rendering layout layouts/application.html.erb
+  Rendering trains/edit.html.erb within layouts/application
+  Rendered common/_errors.html.erb (Duration: 0.2ms | Allocations: 42)
+  [1m[36mRailwayStation Load (0.4ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations"[0m
+  ↳ app/views/trains/_form.html.erb:11
+  Rendered trains/_form.html.erb (Duration: 6.1ms | Allocations: 1673)
+  Rendered trains/edit.html.erb within layouts/application (Duration: 6.9ms | Allocations: 1789)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 4970)
+Completed 200 OK in 19ms (Views: 14.7ms | ActiveRecord: 0.5ms | Allocations: 5897)
+
+
+Started PATCH "/trains/7" for 127.0.0.1 at 2022-06-04 10:30:49 +0300
+Processing by TrainsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "train"=>{"number"=>"213", "current_station_id"=>"2"}, "commit"=>"Изменить", "id"=>"7"}
+  [1m[36mTrain Load (0.3ms)[0m  [1m[34mSELECT "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/trains_controller.rb:44:in `set_train'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trains_controller.rb:29:in `update'
+  [1m[36mTrain Update (0.5ms)[0m  [1m[33mUPDATE "trains" SET "updated_at" = ?, "current_station_id" = ? WHERE "trains"."id" = ?[0m  [["updated_at", "2022-06-04 07:30:49.752941"], ["current_station_id", 2], ["id", 7]]
+  ↳ app/controllers/trains_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/trains_controller.rb:29:in `update'
+Redirected to http://localhost:3000/trains/7
+Completed 302 Found in 23ms (ActiveRecord: 3.9ms | Allocations: 5161)
+
+
+Started GET "/trains/7" for 127.0.0.1 at 2022-06-04 10:30:49 +0300
+Processing by TrainsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mTrain Load (0.2ms)[0m  [1m[34mSELECT "trains".* FROM "trains" WHERE "trains"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/trains_controller.rb:44:in `set_train'
+  Rendering layout layouts/application.html.erb
+  Rendering trains/show.html.erb within layouts/application
+  [1m[36mRailwayStation Load (0.2ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations" WHERE "railway_stations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/trains/show.html.erb:10
+  Rendered trains/show.html.erb within layouts/application (Duration: 3.7ms | Allocations: 866)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 4039)
+Completed 200 OK in 14ms (Views: 10.4ms | ActiveRecord: 0.4ms | Allocations: 4962)
+
+
+Started GET "/trains" for 127.0.0.1 at 2022-06-04 10:30:51 +0300
+Processing by TrainsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering trains/index.html.erb within layouts/application
+  [1m[36mTrain Load (0.2ms)[0m  [1m[34mSELECT "trains".* FROM "trains"[0m
+  ↳ app/views/trains/index.html.erb:13
+  Rendered collection of trains/_train.html.erb [6 times] (Duration: 2.6ms | Allocations: 879)
+  Rendered trains/index.html.erb within layouts/application (Duration: 8.2ms | Allocations: 1759)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 4932)
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.2ms | Allocations: 5326)
+
+
+Started GET "/" for 127.0.0.1 at 2022-06-04 10:30:53 +0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 135)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 3312)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.0ms | Allocations: 3690)
+
+
+Started GET "/trains" for 127.0.0.1 at 2022-06-04 10:30:54 +0300
+Processing by TrainsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering trains/index.html.erb within layouts/application
+  [1m[36mTrain Load (0.3ms)[0m  [1m[34mSELECT "trains".* FROM "trains"[0m
+  ↳ app/views/trains/index.html.erb:13
+  Rendered collection of trains/_train.html.erb [6 times] (Duration: 2.5ms | Allocations: 878)
+  Rendered trains/index.html.erb within layouts/application (Duration: 7.7ms | Allocations: 1758)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.6ms | Allocations: 4931)
+Completed 200 OK in 19ms (Views: 17.2ms | ActiveRecord: 0.3ms | Allocations: 5325)
+
+
+Started GET "/" for 127.0.0.1 at 2022-06-04 10:30:55 +0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 128)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 3301)
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 3678)
+
+
+Started GET "/railway_stations" for 127.0.0.1 at 2022-06-04 10:30:56 +0300
+Processing by RailwayStationsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering railway_stations/index.html.erb within layouts/application
+  [1m[36mRailwayStation Load (0.3ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations"[0m
+  ↳ app/views/railway_stations/index.html.erb:15
+  Rendered railway_stations/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 1644)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 4783)
+Completed 200 OK in 17ms (Views: 15.4ms | ActiveRecord: 0.3ms | Allocations: 5725)
+
+
+Started GET "/" for 127.0.0.1 at 2022-06-04 10:30:57 +0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 135)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 3312)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.0ms | Allocations: 3691)
+
+
+Started GET "/routes" for 127.0.0.1 at 2022-06-04 10:30:58 +0300
+Processing by RoutesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering routes/index.html.erb within layouts/application
+  [1m[36mRoute Load (0.3ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  ↳ app/views/routes/index.html.erb:14
+  Rendered routes/index.html.erb within layouts/application (Duration: 6.4ms | Allocations: 1316)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 4499)
+Completed 200 OK in 19ms (Views: 16.8ms | ActiveRecord: 0.3ms | Allocations: 4895)
+
+
+Started GET "/routes/1" for 127.0.0.1 at 2022-06-04 10:31:00 +0300
+Processing by RoutesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/routes_controller.rb:44:in `set_route'
+  Rendering layout layouts/application.html.erb
+  Rendering routes/show.html.erb within layouts/application
+  [1m[36mRailwayStation Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "railway_stations" INNER JOIN "railway_stations_routes" ON "railway_stations"."id" = "railway_stations_routes"."railway_station_id" WHERE "railway_stations_routes"."route_id" = ? LIMIT ?[0m  [["route_id", 1], ["LIMIT", 1]]
+  ↳ app/views/routes/show.html.erb:9
+  [1m[36mRailwayStation Load (0.2ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations" INNER JOIN "railway_stations_routes" ON "railway_stations"."id" = "railway_stations_routes"."railway_station_id" WHERE "railway_stations_routes"."route_id" = ?[0m  [["route_id", 1]]
+  ↳ app/views/routes/show.html.erb:21
+  Rendered routes/show.html.erb within layouts/application (Duration: 10.1ms | Allocations: 2182)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 5354)
+Completed 200 OK in 22ms (Views: 17.5ms | ActiveRecord: 0.8ms | Allocations: 6280)
+
+
+Started GET "/routes" for 127.0.0.1 at 2022-06-04 10:31:01 +0300
+Processing by RoutesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering routes/index.html.erb within layouts/application
+  [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  ↳ app/views/routes/index.html.erb:14
+  Rendered routes/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1307)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.7ms | Allocations: 4482)
+Completed 200 OK in 20ms (Views: 18.6ms | ActiveRecord: 0.2ms | Allocations: 4877)
+
+
+Started GET "/routes/1/edit" for 127.0.0.1 at 2022-06-04 10:31:02 +0300
+Processing by RoutesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoute Load (0.3ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/routes_controller.rb:44:in `set_route'
+  Rendering layout layouts/application.html.erb
+  Rendering routes/edit.html.erb within layouts/application
+  Rendered common/_errors.html.erb (Duration: 0.2ms | Allocations: 42)
+  Rendered routes/_form.html.erb (Duration: 2.1ms | Allocations: 679)
+  Rendered routes/edit.html.erb within layouts/application (Duration: 2.7ms | Allocations: 795)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 3981)
+Completed 200 OK in 13ms (Views: 8.8ms | ActiveRecord: 0.3ms | Allocations: 4908)
+
+
+Started GET "/routes" for 127.0.0.1 at 2022-06-04 10:31:04 +0300
+Processing by RoutesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering routes/index.html.erb within layouts/application
+  [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  ↳ app/views/routes/index.html.erb:14
+  Rendered routes/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 1307)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 4491)
+Completed 200 OK in 16ms (Views: 14.3ms | ActiveRecord: 0.2ms | Allocations: 4887)
+
+
+Started GET "/search" for 127.0.0.1 at 2022-06-04 10:51:17 +0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SearchesController#show as HTML
+Completed 406 Not Acceptable in 10ms (ActiveRecord: 0.0ms | Allocations: 2959)
+
+
+  
+ActionController::MissingExactTemplate (SearchesController#show is missing a template for request formats: text/html):
+  
+actionpack (6.1.5.1) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (6.1.5.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (6.1.5.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (6.1.5.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.1.5.1) lib/abstract_controller/base.rb:228:in `process_action'
+actionpack (6.1.5.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.1.5.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.1.5.1) lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+actiontext (6.1.5.1) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (6.1.5.1) lib/action_text/engine.rb:59:in `block (4 levels) in <class:Engine>'
+activesupport (6.1.5.1) lib/active_support/callbacks.rb:126:in `instance_exec'
+activesupport (6.1.5.1) lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+activesupport (6.1.5.1) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.5.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.5.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.5.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.5.1) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.5.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.5.1) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.5.1) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.5.1) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.5.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.5.1) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.5.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.5.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.5.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.5.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.5.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.5.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.5.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.5.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.5.1) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.5.1) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.5.1) lib/action_dispatch/http/content_security_policy.rb:19:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5.1) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.5.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.5.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.5.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.5.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.5.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.5.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.5.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.5.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.5.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.5.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.5.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.5.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.5.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.5.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.5.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.5.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.5.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.5.1) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-mini-profiler (2.3.4) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.2) lib/rack/proxy.rb:67:in `call'
+railties (6.1.5.1) lib/rails/engine.rb:539:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/search" for 127.0.0.1 at 2022-06-04 10:52:20 +0300
+Processing by SearchesController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering searches/show.html.erb within layouts/application
+  Rendered searches/show.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1216)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 1281)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 2445)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"routes", :id=>nil}, missing required keys: [:id]):
+     6: </p>
+     7: 
+     8: 
+     9: <%= link_to 'Редактировать', edit_route_path(@route) %> |
+    10: <%= link_to 'Назад',  routes_path %>
+  
+app/views/searches/show.html.erb:9
+Started GET "/search" for 127.0.0.1 at 2022-06-04 10:52:33 +0300
+Processing by SearchesController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering searches/show.html.erb within layouts/application
+  Rendered searches/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 140)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 6045)
+Completed 200 OK in 23ms (Views: 20.6ms | ActiveRecord: 0.0ms | Allocations: 7148)
+
+
+Started GET "/search" for 127.0.0.1 at 2022-06-04 10:52:58 +0300
+Processing by SearchesController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering searches/show.html.erb within layouts/application
+  Rendered searches/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 141)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 3522)
+Completed 200 OK in 16ms (Views: 13.7ms | ActiveRecord: 0.0ms | Allocations: 4604)
+
+
