@@ -13478,3 +13478,194 @@ Did you mean?  tickets
                tickets=):
   
 app/controllers/tickets_controller.rb:9:in `create'
+Started GET "/tickets" for 127.0.0.1 at 2022-06-04 17:39:30 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/tickets"):
+  
+Started GET "/search" for 127.0.0.1 at 2022-06-04 17:39:37 +0300
+Processing by SearchesController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering searches/show.html.erb within layouts/application
+  Rendered searches/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 113)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/layouts/application.html.erb:18
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:18
+  Rendered layout layouts/application.html.erb (Duration: 18.2ms | Allocations: 10312)
+Completed 200 OK in 20ms (Views: 19.4ms | ActiveRecord: 1.4ms | Allocations: 10816)
+
+
+Started POST "/tickets" for 127.0.0.1 at 2022-06-04 17:39:39 +0300
+Processing by TicketsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tickets_controller.rb:10:in `create'
+  [1m[36mTicket Create (0.6ms)[0m  [1m[32mINSERT INTO "tickets" ("user_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["user_id", 2], ["created_at", "2022-06-04 14:39:39.293199"], ["updated_at", "2022-06-04 14:39:39.293199"]]
+  ↳ app/controllers/tickets_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tickets_controller.rb:10:in `create'
+Redirected to http://localhost:3000/tickets/12
+Completed 302 Found in 24ms (ActiveRecord: 3.9ms | Allocations: 8183)
+
+
+Started GET "/tickets/12" for 127.0.0.1 at 2022-06-04 17:39:39 +0300
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mTicket Load (0.3ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/tickets_controller.rb:5:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering tickets/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/tickets/show.html.erb:2
+  Rendered tickets/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 983)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:18
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 5202)
+Completed 200 OK in 12ms (Views: 8.0ms | ActiveRecord: 0.5ms | Allocations: 6356)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2022-06-04 17:39:40 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 0.2ms | Allocations: 2107)
+
+
+Started GET "/" for 127.0.0.1 at 2022-06-04 17:39:40 +0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 261)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3659)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 4623)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddAdminFlagToUsers (20220604144100)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "admin" boolean DEFAULT 0[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220604144100"]]
+  [1m[36mTRANSACTION (38.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-06-04 17:42:16 +0300
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 615)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 2236)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 5603)
+Completed 200 OK in 16ms (Views: 8.3ms | ActiveRecord: 0.8ms | Allocations: 12854)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-06-04 17:42:19 +0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.6ms | Allocations: 219)
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 179)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2024)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 5372)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 6558)
+
+
+Started POST "/users" for 127.0.0.1 at 2022-06-04 17:42:35 +0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"13@13.13", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "13@13.13"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "confirmation_token", "confirmation_sent_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "13@13.13"], ["encrypted_password", "$2a$12$8eqUPRn/u9.ueGS5h9Wqi.ZXnWatSPbZJ5NwW2m4.33JFj5LbHt9S"], ["confirmation_token", "e_8D4umKSKhjCwFuUGzK"], ["confirmation_sent_at", "2022-06-04 14:42:35.206565"], ["created_at", "2022-06-04 14:42:35.206478"], ["updated_at", "2022-06-04 14:42:35.206478"]]
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[36mcommit transaction[0m
+  Rendering devise/mailer/confirmation_instructions.html.erb
+  Rendered devise/mailer/confirmation_instructions.html.erb (Duration: 1.0ms | Allocations: 227)
+Devise::Mailer#confirmation_instructions: processed outbound mail in 8.5ms
+Delivered mail 629b6f5b37317_17b74e48894a3@mokkiko.mail (17.9ms)
+Date: Sat, 04 Jun 2022 17:42:35 +0300
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: 13@13.13
+Message-ID: <629b6f5b37317_17b74e48894a3@mokkiko.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome 13@13.13!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=e_8D4umKSKhjCwFuUGzK">Confirm my account</a></p>
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 235ms (ActiveRecord: 2.5ms | Allocations: 18327)
+
+
+Started GET "/" for 127.0.0.1 at 2022-06-04 17:42:35 +0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 135)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 3523)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 4027)
+
+
+Started GET "/users/confirmation?confirmation_token=[FILTERED]" for 127.0.0.1 at 2022-06-04 17:42:36 +0300
+Processing by Devise::ConfirmationsController#show as HTML
+  Parameters: {"confirmation_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."confirmation_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["confirmation_token", "e_8D4umKSKhjCwFuUGzK"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "confirmed_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["confirmed_at", "2022-06-04 14:42:36.930073"], ["updated_at", "2022-06-04 14:42:36.930558"], ["id", 3]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 20ms (ActiveRecord: 2.5ms | Allocations: 6437)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-06-04 17:42:36 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 225)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1381)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 4771)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.0ms | Allocations: 5359)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-06-04 17:42:50 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"13@13.13", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "13@13.13"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 195ms (ActiveRecord: 0.5ms | Allocations: 2626)
+
+
+Started GET "/" for 127.0.0.1 at 2022-06-04 17:42:50 +0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 128)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:18
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 4377)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.2ms | Allocations: 4765)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "admin" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2022-06-04 14:43:46.607499"], ["admin", 1], ["id", 3]]
+  [1m[36mTRANSACTION (12.3ms)[0m  [1m[36mcommit transaction[0m
