@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
-  resources :tickets
+
   devise_for :users
+
+  resources :tickets, only: [:create, :show]
+
   resources :railway_stations do
     patch :update_position, on: :member 
   end
