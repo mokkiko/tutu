@@ -1,4 +1,4 @@
-class RailwayStationsController < ApplicationController
+class Admin::RailwayStationsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_railway_station, only: %i[ show edit update destroy ]
 
