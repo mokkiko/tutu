@@ -11917,3 +11917,82 @@ Processing by SearchesController#show as HTML
 Completed 200 OK in 16ms (Views: 13.7ms | ActiveRecord: 0.0ms | Allocations: 4604)
 
 
+Started GET "/search" for 127.0.0.1 at 2022-06-04 10:53:42 +0300
+Processing by SearchesController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering searches/show.html.erb within layouts/application
+  Rendered searches/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 51)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 3249)
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.0ms | Allocations: 3625)
+
+
+Started GET "/" for 127.0.0.1 at 2022-06-04 10:53:43 +0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 269)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 3409)
+Completed 200 OK in 12ms (Views: 9.8ms | ActiveRecord: 0.0ms | Allocations: 4285)
+
+
+Started GET "/routes" for 127.0.0.1 at 2022-06-04 10:53:46 +0300
+Processing by RoutesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering routes/index.html.erb within layouts/application
+  [1m[36mRoute Load (0.3ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  ↳ app/views/routes/index.html.erb:14
+  Rendered routes/index.html.erb within layouts/application (Duration: 9.7ms | Allocations: 3795)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | Allocations: 6936)
+Completed 200 OK in 29ms (Views: 18.9ms | ActiveRecord: 0.8ms | Allocations: 9871)
+
+
+Started GET "/routes/new" for 127.0.0.1 at 2022-06-04 10:53:47 +0300
+Processing by RoutesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering routes/new.html.erb within layouts/application
+  Rendered common/_errors.html.erb (Duration: 0.4ms | Allocations: 213)
+  Rendered routes/_form.html.erb (Duration: 6.8ms | Allocations: 2652)
+  Rendered routes/new.html.erb within layouts/application (Duration: 9.0ms | Allocations: 3007)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | Allocations: 6183)
+Completed 200 OK in 19ms (Views: 16.9ms | ActiveRecord: 0.0ms | Allocations: 6726)
+
+
+Started GET "/routes" for 127.0.0.1 at 2022-06-04 10:53:48 +0300
+Processing by RoutesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering routes/index.html.erb within layouts/application
+  [1m[36mRoute Load (0.3ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  ↳ app/views/routes/index.html.erb:14
+  Rendered routes/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1320)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 4493)
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 0.3ms | Allocations: 4894)
+
+
+Started GET "/" for 127.0.0.1 at 2022-06-04 10:53:50 +0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 135)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 3312)
+Completed 200 OK in 12ms (Views: 10.2ms | ActiveRecord: 0.0ms | Allocations: 3690)
+
+
+Started GET "/trains" for 127.0.0.1 at 2022-06-04 10:53:52 +0300
+Processing by TrainsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering trains/index.html.erb within layouts/application
+  [1m[36mTrain Load (0.5ms)[0m  [1m[34mSELECT "trains".* FROM "trains"[0m
+  ↳ app/views/trains/index.html.erb:13
+  Rendered collection of trains/_train.html.erb [6 times] (Duration: 2.1ms | Allocations: 1083)
+  Rendered trains/index.html.erb within layouts/application (Duration: 14.1ms | Allocations: 4483)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.5ms | Allocations: 7622)
+Completed 200 OK in 31ms (Views: 21.7ms | ActiveRecord: 1.3ms | Allocations: 9664)
+
+
