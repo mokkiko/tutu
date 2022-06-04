@@ -11,6 +11,17 @@
   </head>
 
   <body>
+
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
+    <% if user_signed_in? %>
+      <%= link_to 'Выйти', destroy_user_session_path, method: :delete %>
+    <% else %>
+      <%= link_to 'Вход', new_user_session_path %>
+    <% end %>
+
+
     <%= yield %>
     <br><br><br><br>
     <%= link_to 'На главную',  root_path %>
