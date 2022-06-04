@@ -56,6 +56,12 @@ class RailwayStationsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  def update_position_railway_station_path
+    @route = Route.find(paraams[:route_id])
+    redirect_to @route
+
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.

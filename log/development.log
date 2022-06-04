@@ -10839,3 +10839,267 @@ Processing by RoutesController#index as HTML
 Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.2ms | Allocations: 4879)
 
 
+Started GET "/" for 127.0.0.1 at 2022-05-29 17:12:47 +0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 398)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | Allocations: 6296)
+Completed 200 OK in 36ms (Views: 25.1ms | ActiveRecord: 0.0ms | Allocations: 9788)
+
+
+Started GET "/routes" for 127.0.0.1 at 2022-05-29 17:12:49 +0300
+Processing by RoutesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering routes/index.html.erb within layouts/application
+  [1m[36mRoute Load (0.3ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  ↳ app/views/routes/index.html.erb:14
+  Rendered routes/index.html.erb within layouts/application (Duration: 12.3ms | Allocations: 3710)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.1ms | Allocations: 6851)
+Completed 200 OK in 32ms (Views: 20.1ms | ActiveRecord: 1.2ms | Allocations: 9747)
+
+
+Started GET "/routes/1" for 127.0.0.1 at 2022-05-29 17:12:51 +0300
+Processing by RoutesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoute Load (0.5ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/routes_controller.rb:44:in `set_route'
+  Rendering layout layouts/application.html.erb
+  Rendering routes/show.html.erb within layouts/application
+  [1m[36mRailwayStation Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "railway_stations" INNER JOIN "railway_stations_routes" ON "railway_stations"."id" = "railway_stations_routes"."railway_station_id" WHERE "railway_stations_routes"."route_id" = ? LIMIT ?[0m  [["route_id", 1], ["LIMIT", 1]]
+  ↳ app/views/routes/show.html.erb:9
+  Rendered routes/show.html.erb within layouts/application (Duration: 40.5ms | Allocations: 13737)
+  Rendered layout layouts/application.html.erb (Duration: 40.9ms | Allocations: 13801)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 1.8ms | Allocations: 15223)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `station' for #<ActionView::Base:0x00000000008c00>):
+    17:         </tr>
+    18:       </thead>
+    19:       <tbody>
+    20:       <% form_tag update_position_railway_station_path(station), method: :patch do %> 
+    21:         !!!!!!!!!!
+    22:         <% number_field_tag :position %>
+    23:         <% text_field_tag :route_id, @route.id %>
+  
+app/views/routes/show.html.erb:20
+Started GET "/routes/1" for 127.0.0.1 at 2022-05-29 17:15:17 +0300
+Processing by RoutesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/routes_controller.rb:44:in `set_route'
+  [1m[36mRoute Load (0.1ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/routes_controller.rb:44:in `set_route'
+  Rendering layout layouts/application.html.erb
+  Rendering routes/show.html.erb within layouts/application
+  [1m[36mRailwayStation Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "railway_stations" INNER JOIN "railway_stations_routes" ON "railway_stations"."id" = "railway_stations_routes"."railway_station_id" WHERE "railway_stations_routes"."route_id" = ? LIMIT ?[0m  [["route_id", 1], ["LIMIT", 1]]
+  ↳ app/views/routes/show.html.erb:9
+  Rendered routes/show.html.erb within layouts/application (Duration: 25.2ms | Allocations: 9883)
+  Rendered layout layouts/application.html.erb (Duration: 25.7ms | Allocations: 9948)
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 2.3ms | Allocations: 15276)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `station' for #<ActionView::Base:0x0000000000a8e8>):
+    17:         </tr>
+    18:       </thead>
+    19:       <tbody>
+    20:       <% form_tag update_position_railway_station_path(station), method: :patch do %> 
+    21:         !!!!!!!!!!
+    22:         <% number_field_tag :position %>
+    23:         <% text_field_tag :route_id, @route.id %>
+  
+app/views/routes/show.html.erb:20
+Started GET "/" for 127.0.0.1 at 2022-05-29 17:15:23 +0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 154)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 3473)
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.0ms | Allocations: 3973)
+
+
+Started GET "/routes" for 127.0.0.1 at 2022-05-29 17:15:24 +0300
+Processing by RoutesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering routes/index.html.erb within layouts/application
+  [1m[36mRoute Load (0.5ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  ↳ app/views/routes/index.html.erb:14
+  Rendered routes/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1394)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 4572)
+Completed 200 OK in 15ms (Views: 13.2ms | ActiveRecord: 0.5ms | Allocations: 4966)
+
+
+Started GET "/routes/1" for 127.0.0.1 at 2022-05-29 17:15:25 +0300
+Processing by RoutesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoute Load (0.3ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/routes_controller.rb:44:in `set_route'
+  Rendering layout layouts/application.html.erb
+  Rendering routes/show.html.erb within layouts/application
+  [1m[36mRailwayStation Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "railway_stations" INNER JOIN "railway_stations_routes" ON "railway_stations"."id" = "railway_stations_routes"."railway_station_id" WHERE "railway_stations_routes"."route_id" = ? LIMIT ?[0m  [["route_id", 1], ["LIMIT", 1]]
+  ↳ app/views/routes/show.html.erb:9
+  Rendered routes/show.html.erb within layouts/application (Duration: 14.5ms | Allocations: 5078)
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 5142)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.6ms | Allocations: 6037)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `station' for #<ActionView::Base:0x0000000000ac80>):
+    17:         </tr>
+    18:       </thead>
+    19:       <tbody>
+    20:       <% form_tag update_position_railway_station_path(station), method: :patch do %> 
+    21:         !!!!!!!!!!
+    22:         <% number_field_tag :position %>
+    23:         <% text_field_tag :route_id, @route.id %>
+  
+app/views/routes/show.html.erb:20
+Started GET "/routes/1" for 127.0.0.1 at 2022-05-29 17:15:34 +0300
+Processing by RoutesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoute Load (0.5ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/routes_controller.rb:44:in `set_route'
+  Rendering layout layouts/application.html.erb
+  Rendering routes/show.html.erb within layouts/application
+  [1m[36mRailwayStation Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "railway_stations" INNER JOIN "railway_stations_routes" ON "railway_stations"."id" = "railway_stations_routes"."railway_station_id" WHERE "railway_stations_routes"."route_id" = ? LIMIT ?[0m  [["route_id", 1], ["LIMIT", 1]]
+  ↳ app/views/routes/show.html.erb:9
+  [1m[36mRailwayStation Load (0.3ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations" INNER JOIN "railway_stations_routes" ON "railway_stations"."id" = "railway_stations_routes"."railway_station_id" WHERE "railway_stations_routes"."route_id" = ?[0m  [["route_id", 1]]
+  ↳ app/views/routes/show.html.erb:21
+  Rendered routes/show.html.erb within layouts/application (Duration: 16.7ms | Allocations: 4689)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 23.9ms | Allocations: 8075)
+Completed 200 OK in 33ms (Views: 26.2ms | ActiveRecord: 1.1ms | Allocations: 9730)
+
+
+Started GET "/routes/1/edit" for 127.0.0.1 at 2022-05-29 17:15:36 +0300
+Processing by RoutesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoute Load (0.7ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/routes_controller.rb:44:in `set_route'
+  Rendering layout layouts/application.html.erb
+  Rendering routes/edit.html.erb within layouts/application
+  Rendered common/_errors.html.erb (Duration: 0.7ms | Allocations: 213)
+  Rendered routes/_form.html.erb (Duration: 10.0ms | Allocations: 2704)
+  Rendered routes/edit.html.erb within layouts/application (Duration: 12.1ms | Allocations: 3062)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.6ms | Allocations: 6236)
+Completed 200 OK in 24ms (Views: 19.2ms | ActiveRecord: 0.7ms | Allocations: 7290)
+
+
+Started PATCH "/routes/1" for 127.0.0.1 at 2022-05-29 17:15:38 +0300
+Processing by RoutesController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "route"=>{"name"=>"Москва - Хабаровск"}, "commit"=>"Изменить", "id"=>"1"}
+  [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/routes_controller.rb:44:in `set_route'
+Redirected to http://localhost:3000/routes/1
+Completed 302 Found in 8ms (ActiveRecord: 0.2ms | Allocations: 1351)
+
+
+Started GET "/routes/1" for 127.0.0.1 at 2022-05-29 17:15:38 +0300
+Processing by RoutesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/routes_controller.rb:44:in `set_route'
+  Rendering layout layouts/application.html.erb
+  Rendering routes/show.html.erb within layouts/application
+  [1m[36mRailwayStation Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "railway_stations" INNER JOIN "railway_stations_routes" ON "railway_stations"."id" = "railway_stations_routes"."railway_station_id" WHERE "railway_stations_routes"."route_id" = ? LIMIT ?[0m  [["route_id", 1], ["LIMIT", 1]]
+  ↳ app/views/routes/show.html.erb:9
+  [1m[36mRailwayStation Load (0.2ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations" INNER JOIN "railway_stations_routes" ON "railway_stations"."id" = "railway_stations_routes"."railway_station_id" WHERE "railway_stations_routes"."route_id" = ?[0m  [["route_id", 1]]
+  ↳ app/views/routes/show.html.erb:21
+  Rendered routes/show.html.erb within layouts/application (Duration: 8.6ms | Allocations: 2183)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 5355)
+Completed 200 OK in 20ms (Views: 15.7ms | ActiveRecord: 0.8ms | Allocations: 6281)
+
+
+Started GET "/routes" for 127.0.0.1 at 2022-05-29 17:15:40 +0300
+Processing by RoutesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering routes/index.html.erb within layouts/application
+  [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  ↳ app/views/routes/index.html.erb:14
+  Rendered routes/index.html.erb within layouts/application (Duration: 7.4ms | Allocations: 1533)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 4710)
+Completed 200 OK in 18ms (Views: 15.8ms | ActiveRecord: 0.2ms | Allocations: 5230)
+
+
+Started GET "/routes/3" for 127.0.0.1 at 2022-05-29 17:15:41 +0300
+Processing by RoutesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mRoute Load (0.3ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/routes_controller.rb:44:in `set_route'
+  Rendering layout layouts/application.html.erb
+  Rendering routes/show.html.erb within layouts/application
+  [1m[36mRailwayStation Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "railway_stations" INNER JOIN "railway_stations_routes" ON "railway_stations"."id" = "railway_stations_routes"."railway_station_id" WHERE "railway_stations_routes"."route_id" = ? LIMIT ?[0m  [["route_id", 3], ["LIMIT", 1]]
+  ↳ app/views/routes/show.html.erb:9
+  Rendered routes/show.html.erb within layouts/application (Duration: 5.8ms | Allocations: 1073)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 4246)
+Completed 200 OK in 20ms (Views: 14.2ms | ActiveRecord: 0.8ms | Allocations: 5173)
+
+
+Started GET "/routes" for 127.0.0.1 at 2022-05-29 17:15:44 +0300
+Processing by RoutesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering routes/index.html.erb within layouts/application
+  [1m[36mRoute Load (0.3ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  ↳ app/views/routes/index.html.erb:14
+  Rendered routes/index.html.erb within layouts/application (Duration: 7.6ms | Allocations: 1307)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.3ms | Allocations: 4481)
+Completed 200 OK in 23ms (Views: 21.2ms | ActiveRecord: 0.3ms | Allocations: 4876)
+
+
+Started GET "/routes/1" for 127.0.0.1 at 2022-05-29 17:15:45 +0300
+Processing by RoutesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/routes_controller.rb:44:in `set_route'
+  Rendering layout layouts/application.html.erb
+  Rendering routes/show.html.erb within layouts/application
+  [1m[36mRailwayStation Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "railway_stations" INNER JOIN "railway_stations_routes" ON "railway_stations"."id" = "railway_stations_routes"."railway_station_id" WHERE "railway_stations_routes"."route_id" = ? LIMIT ?[0m  [["route_id", 1], ["LIMIT", 1]]
+  ↳ app/views/routes/show.html.erb:9
+  [1m[36mRailwayStation Load (0.2ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations" INNER JOIN "railway_stations_routes" ON "railway_stations"."id" = "railway_stations_routes"."railway_station_id" WHERE "railway_stations_routes"."route_id" = ?[0m  [["route_id", 1]]
+  ↳ app/views/routes/show.html.erb:21
+  Rendered routes/show.html.erb within layouts/application (Duration: 8.1ms | Allocations: 2181)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 5353)
+Completed 200 OK in 20ms (Views: 15.0ms | ActiveRecord: 0.7ms | Allocations: 6279)
+
+
+Started GET "/routes" for 127.0.0.1 at 2022-05-29 17:15:48 +0300
+Processing by RoutesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering routes/index.html.erb within layouts/application
+  [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  ↳ app/views/routes/index.html.erb:14
+  Rendered routes/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 1315)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 4490)
+Completed 200 OK in 16ms (Views: 14.2ms | ActiveRecord: 0.2ms | Allocations: 4895)
+
+
+Started GET "/routes/3" for 127.0.0.1 at 2022-05-29 17:15:48 +0300
+Processing by RoutesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mRoute Load (0.3ms)[0m  [1m[34mSELECT "routes".* FROM "routes" WHERE "routes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/routes_controller.rb:44:in `set_route'
+  Rendering layout layouts/application.html.erb
+  Rendering routes/show.html.erb within layouts/application
+  [1m[36mRailwayStation Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "railway_stations" INNER JOIN "railway_stations_routes" ON "railway_stations"."id" = "railway_stations_routes"."railway_station_id" WHERE "railway_stations_routes"."route_id" = ? LIMIT ?[0m  [["route_id", 3], ["LIMIT", 1]]
+  ↳ app/views/routes/show.html.erb:9
+  Rendered routes/show.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1073)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 4246)
+Completed 200 OK in 19ms (Views: 13.7ms | ActiveRecord: 0.6ms | Allocations: 5172)
+
+
