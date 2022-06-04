@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :tickets
   devise_for :users
   resources :railway_stations do
     patch :update_position, on: :member 
