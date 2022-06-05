@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tutu - ADMIN</title> 
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  
+    <p id="notice" class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
+    <% if user_signed_in? %>
+
+      <p> Аккауннт: <%= current_user.email %></p>
+      <%= link_to 'Выйти', destroy_user_session_path, method: :delete %>
+    <% else %>
+      <%= link_to 'Вход', new_user_session_path %>
+    <% end %>
+
+
+    <%= yield %>
+    <br><br><br><br>
+    <h1><%= link_to 'На главную',  root_path %></h1>
+    <br>
+    <h1><%= link_to 'КУПИТЬ БИЛЕТ',  search_path %> </h1>  
+
+  </body>
+</html>

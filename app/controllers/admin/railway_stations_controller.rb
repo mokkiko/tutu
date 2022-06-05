@@ -1,5 +1,5 @@
-class Admin::RailwayStationsController < ApplicationController
-  before_action :authenticate_user!
+class Admin::RailwayStationsController < Admin::BaseController
+
   before_action :set_railway_station, only: %i[ show edit update destroy ]
 
   # GET /railway_stations or /railway_stations.json
