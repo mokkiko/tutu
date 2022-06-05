@@ -15011,3 +15011,267 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.0ms | Allocations: 4628)
 
 
+Started GET "/admin/routes" for 127.0.0.1 at 2022-06-05 11:46:05 +0300
+Processing by Admin::RoutesController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 298)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-06-05 11:46:05 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.3ms | Allocations: 615)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 8.6ms | Allocations: 2184)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.6ms | Allocations: 5576)
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.0ms | Allocations: 7105)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-06-05 11:46:07 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"13@13.13", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "13@13.13"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/admin/routes
+Completed 302 Found in 309ms (ActiveRecord: 0.6ms | Allocations: 3297)
+
+
+Started GET "/admin/routes" for 127.0.0.1 at 2022-06-05 11:46:08 +0300
+Processing by Admin::RoutesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/routes/index.html.erb within layouts/admin
+  [1m[36mRoute Load (0.3ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  ↳ app/views/admin/routes/index.html.erb:14
+  Rendered admin/routes/index.html.erb within layouts/admin (Duration: 20.2ms | Allocations: 6366)
+  Rendered layout layouts/admin.html.erb (Duration: 20.5ms | Allocations: 6430)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 1.7ms | Allocations: 9277)
+
+
+  
+ActionView::Template::Error (undefined method `route_path' for #<ActionView::Base:0x000000000314c0>
+Did you mean?  root_path):
+    14:     <% @routes.each do |route| %>
+    15:       <tr>
+    16:        <td><%= route.name %></td>
+    17:        <td><%= link_to 'Показать', route%></td>
+    18:        <td><%= link_to 'Редактировать', edit_route_path(route) %></td>
+    19:        <td><%= link_to 'Удалить', route, method: :delete, data: { confirm: 'Вы уверены?' } %></td>
+    20:        <br>
+  
+app/views/admin/routes/index.html.erb:17
+app/views/admin/routes/index.html.erb:14
+Started GET "/admin/routes" for 127.0.0.1 at 2022-06-05 11:47:05 +0300
+Processing by Admin::RoutesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/routes/index.html.erb within layouts/admin
+  [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  ↳ app/views/admin/routes/index.html.erb:14
+  Rendered admin/routes/index.html.erb within layouts/admin (Duration: 22.9ms | Allocations: 5595)
+  Rendered layout layouts/admin.html.erb (Duration: 23.3ms | Allocations: 5659)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.6ms | Allocations: 7577)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `admin_route' for #<ActionView::Base:0x00000000031920>
+Did you mean?  admin_route_url):
+    14:     <% @routes.each do |route| %>
+    15:       <tr>
+    16:        <td><%= route.name %></td>
+    17:        <td><%= link_to 'Показать', admin_route%></td>
+    18:        <td><%= link_to 'Редактировать', edit_admin_route_path(route) %></td>
+    19:        <td><%= link_to 'Удалить', admin_route, method: :delete, data: { confirm: 'Вы уверены?' } %></td>
+    20:        <br>
+  
+app/views/admin/routes/index.html.erb:17
+app/views/admin/routes/index.html.erb:14
+Started GET "/admin/routes" for 127.0.0.1 at 2022-06-05 11:47:19 +0300
+Processing by Admin::RoutesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/routes/index.html.erb within layouts/admin
+  [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  ↳ app/views/admin/routes/index.html.erb:14
+  Rendered admin/routes/index.html.erb within layouts/admin (Duration: 16.8ms | Allocations: 5348)
+  Rendered layout layouts/admin.html.erb (Duration: 17.1ms | Allocations: 5412)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.4ms | Allocations: 7330)
+
+
+  
+ActionView::Template::Error (undefined method `admin_route' for #<ActionView::Base:0x00000000031d80>
+Did you mean?  admin_route_url):
+    14:     <% @routes.each do |route| %>
+    15:       <tr>
+    16:        <td><%= route.name %></td>
+    17:        <td><%= link_to 'Показать', admin_route(route) %></td>
+    18:        <td><%= link_to 'Редактировать', edit_admin_route_path(route) %></td>
+    19:        <td><%= link_to 'Удалить', admin_route, method: :delete, data: { confirm: 'Вы уверены?' } %></td>
+    20:        <br>
+  
+app/views/admin/routes/index.html.erb:17
+app/views/admin/routes/index.html.erb:14
+Started GET "/admin/routes" for 127.0.0.1 at 2022-06-05 11:48:30 +0300
+Processing by Admin::RoutesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/routes/index.html.erb within layouts/admin
+  [1m[36mRoute Load (0.3ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  ↳ app/views/admin/routes/index.html.erb:14
+  Rendered admin/routes/index.html.erb within layouts/admin (Duration: 26.1ms | Allocations: 6445)
+  Rendered layout layouts/admin.html.erb (Duration: 26.6ms | Allocations: 6509)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 0.6ms | Allocations: 8427)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_route_path' for #<ActionView::Base:0x00000000032230>
+Did you mean?  new_admin_route_path):
+    27: 
+    28: <br>
+    29: 
+    30: <%= link_to 'Добавить новый маршрут', new_route_path %>
+  
+app/views/admin/routes/index.html.erb:30
+Started GET "/admin/routes" for 127.0.0.1 at 2022-06-05 11:48:41 +0300
+Processing by Admin::RoutesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/routes/index.html.erb within layouts/admin
+  [1m[36mRoute Load (0.3ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  ↳ app/views/admin/routes/index.html.erb:14
+  Rendered admin/routes/index.html.erb within layouts/admin (Duration: 31.0ms | Allocations: 6303)
+  Rendered layout layouts/admin.html.erb (Duration: 31.5ms | Allocations: 6367)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 0.7ms | Allocations: 8285)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `admin_new_route_path' for #<ActionView::Base:0x00000000032668>
+Did you mean?  admin_route_path
+               admin_routes_path):
+    27: 
+    28: <br>
+    29: 
+    30: <%= link_to 'Добавить новый маршрут', admin_new_route_path %>
+  
+app/views/admin/routes/index.html.erb:30
+Started GET "/admin/routes" for 127.0.0.1 at 2022-06-05 11:49:00 +0300
+Processing by Admin::RoutesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/routes/index.html.erb within layouts/admin
+  [1m[36mRoute Load (0.2ms)[0m  [1m[34mSELECT "routes".* FROM "routes"[0m
+  ↳ app/views/admin/routes/index.html.erb:14
+  Rendered admin/routes/index.html.erb within layouts/admin (Duration: 7.6ms | Allocations: 1780)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/admin.html.erb (Duration: 14.9ms | Allocations: 5459)
+Completed 200 OK in 25ms (Views: 16.6ms | ActiveRecord: 0.5ms | Allocations: 7405)
+
+
+Started GET "/search" for 127.0.0.1 at 2022-06-05 11:49:02 +0300
+Processing by SearchesController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering searches/show.html.erb within layouts/application
+  Rendered searches/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 218)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:18
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | Allocations: 4755)
+Completed 200 OK in 20ms (Views: 17.7ms | ActiveRecord: 0.2ms | Allocations: 5866)
+
+
+Started GET "/search" for 127.0.0.1 at 2022-06-05 11:49:04 +0300
+Processing by SearchesController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering searches/show.html.erb within layouts/application
+  Rendered searches/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 107)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:18
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 4296)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.2ms | Allocations: 4681)
+
+
+Started GET "/" for 127.0.0.1 at 2022-06-05 11:49:04 +0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 260)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:18
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 4469)
+Completed 200 OK in 17ms (Views: 15.4ms | ActiveRecord: 0.3ms | Allocations: 5430)
+
+
+Started GET "/" for 127.0.0.1 at 2022-06-05 11:49:06 +0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 128)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:18
+  Rendered layout layouts/application.html.erb (Duration: 16.7ms | Allocations: 4329)
+Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 0.2ms | Allocations: 4715)
+
+
+Started GET "/admin/trains" for 127.0.0.1 at 2022-06-05 11:49:07 +0300
+Processing by Admin::TrainsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/trains/index.html.erb within layouts/admin
+  [1m[36mTrain Load (0.4ms)[0m  [1m[34mSELECT "trains".* FROM "trains"[0m
+  ↳ app/views/admin/trains/index.html.erb:13
+  Rendered collection of admin/trains/_train.html.erb [6 times] (Duration: 11.1ms | Allocations: 3959)
+  Rendered admin/trains/index.html.erb within layouts/admin (Duration: 21.9ms | Allocations: 7290)
+  Rendered layout layouts/admin.html.erb (Duration: 22.0ms | Allocations: 7354)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 1.1ms | Allocations: 9925)
+
+
+  
+ActionView::Template::Error (undefined method `train_path' for #<ActionView::Base:0x00000000032d70>):
+    1: 
+    2:   <tr>
+    3:     <td><%= train.number %></td>
+    4:     <td><%= link_to 'Показать', train %></td>
+    5:     <td><%= link_to 'Редактировать', edit_train_path(train) %></td>
+    6:     <td><%= link_to 'Удалить', train, method: :delete, data: { confirm: 'ВЫ УВЕРЕНЫ?' } %></td>
+    7:   </tr>
+  
+app/views/admin/trains/_train.html.erb:4
+app/views/admin/trains/index.html.erb:13
+Started GET "/admin/trains" for 127.0.0.1 at 2022-06-05 11:49:50 +0300
+Processing by Admin::TrainsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/trains/index.html.erb within layouts/admin
+  [1m[36mTrain Load (0.2ms)[0m  [1m[34mSELECT "trains".* FROM "trains"[0m
+  ↳ app/views/admin/trains/index.html.erb:13
+  Rendered collection of admin/trains/_train.html.erb [6 times] (Duration: 4.2ms | Allocations: 1391)
+  Rendered admin/trains/index.html.erb within layouts/admin (Duration: 25.8ms | Allocations: 7229)
+  Rendered layout layouts/admin.html.erb (Duration: 26.3ms | Allocations: 7293)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.5ms | Allocations: 9205)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_train_path' for #<ActionView::Base:0x00000000033220>
+Did you mean?  new_confirmation_path):
+    16: 
+    17: <br>
+    18: 
+    19: <%= link_to 'Добавить новый поезд', new_train_path %>
+  
+app/views/admin/trains/index.html.erb:19
+Started GET "/admin/trains" for 127.0.0.1 at 2022-06-05 11:50:01 +0300
+Processing by Admin::TrainsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/trains/index.html.erb within layouts/admin
+  [1m[36mTrain Load (0.3ms)[0m  [1m[34mSELECT "trains".* FROM "trains"[0m
+  ↳ app/views/admin/trains/index.html.erb:13
+  Rendered collection of admin/trains/_train.html.erb [6 times] (Duration: 3.0ms | Allocations: 1388)
+  Rendered admin/trains/index.html.erb within layouts/admin (Duration: 8.0ms | Allocations: 2533)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/admin.html.erb (Duration: 16.5ms | Allocations: 6206)
+Completed 200 OK in 25ms (Views: 18.2ms | ActiveRecord: 0.5ms | Allocations: 8146)
+
+
