@@ -1,2 +1,8 @@
 ru:
   hello: 'привет'
+
+  railway_station:
+    new:
+      title: 'Новая станция'
+  common:
+    back: 'назаддддддд'
