@@ -17185,3 +17185,1167 @@ Processing by Admin::TrainsController#new as HTML
 Completed 200 OK in 33ms (Views: 16.1ms | ActiveRecord: 1.8ms | Allocations: 22891)
 
 
+Started GET "/" for 127.0.0.1 at 2022-06-09 13:25:05 +0300
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 553)
+  Rendered layout layouts/application.html.erb (Duration: 175.1ms | Allocations: 55378)
+Completed 500 Internal Server Error in 190ms (ActiveRecord: 0.0ms | Allocations: 58723)
+
+
+  
+ActionView::Template::Error (The asset "apple-touch-icon-144x144-precomposed.png" is not present in the asset pipeline.
+):
+    11: 
+    12:     <!-- For third-generation iPad with high-resolution Retina display: -->
+    13:     <!-- Size should be 144 x 144 pixels -->
+    14:     <%= favicon_link_tag 'apple-touch-icon-144x144-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '144x144' %>
+    15: 
+    16:     <!-- For iPhone with high-resolution Retina display: -->
+    17:     <!-- Size should be 114 x 114 pixels -->
+  
+app/views/layouts/application.html.erb:14
+Started GET "/" for 127.0.0.1 at 2022-06-09 13:26:06 +0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 281)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 7823)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms | Allocations: 9125)
+
+
+  
+ActionView::Template::Error (The asset "apple-touch-icon-144x144-precomposed.png" is not present in the asset pipeline.
+):
+    11: 
+    12:     <!-- For third-generation iPad with high-resolution Retina display: -->
+    13:     <!-- Size should be 144 x 144 pixels -->
+    14:     <%= favicon_link_tag 'apple-touch-icon-144x144-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '144x144' %>
+    15: 
+    16:     <!-- For iPhone with high-resolution Retina display: -->
+    17:     <!-- Size should be 114 x 114 pixels -->
+  
+app/views/layouts/application.html.erb:14
+Started GET "/" for 127.0.0.1 at 2022-06-09 13:26:19 +0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 260)
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | Allocations: 7578)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms | Allocations: 8790)
+
+
+  
+ActionView::Template::Error (The asset "apple-touch-icon-144x144-precomposed.png" is not present in the asset pipeline.
+):
+    11: 
+    12:     <!-- For third-generation iPad with high-resolution Retina display: -->
+    13:     <!-- Size should be 144 x 144 pixels -->
+    14:    # <%= favicon_link_tag 'apple-touch-icon-144x144-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '144x144' %>
+    15: 
+    16:     <!-- For iPhone with high-resolution Retina display: -->
+    17:     <!-- Size should be 114 x 114 pixels -->
+  
+app/views/layouts/application.html.erb:14
+Started GET "/" for 127.0.0.1 at 2022-06-09 13:26:30 +0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 260)
+  Rendered layout layouts/application.html.erb (Duration: 16.0ms | Allocations: 7554)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms | Allocations: 8766)
+
+
+  
+ActionView::Template::Error (The asset "apple-touch-icon-114x114-precomposed.png" is not present in the asset pipeline.
+):
+    14: 
+    15:     <!-- For iPhone with high-resolution Retina display: -->
+    16:     <!-- Size should be 114 x 114 pixels -->
+    17:     <%= favicon_link_tag 'apple-touch-icon-114x114-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '114x114' %>
+    18: 
+    19:     <!-- For first- and second-generation iPad: -->
+    20:     <!-- Size should be 72 x 72 pixels -->
+  
+app/views/layouts/application.html.erb:17
+Started GET "/" for 127.0.0.1 at 2022-06-09 13:27:09 +0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 263)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 7497)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms | Allocations: 8702)
+
+
+  
+ActionView::Template::Error (The asset "favicon.ico" is not present in the asset pipeline.
+):
+    23:   
+    24:     <!-- For all other devices -->
+    25:     <!-- Size should be 32 x 32 pixels -->
+    26:     <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
+    27: 
+    28:     <%= javascript_include_tag "application" %>
+    29: 
+  
+app/views/layouts/application.html.erb:26
+Started GET "/" for 127.0.0.1 at 2022-06-09 13:27:20 +0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 260)
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 9022)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms | Allocations: 10234)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /home/maibenben/robomax/think/tutu/app/assets/config
+  /home/maibenben/robomax/think/tutu/app/assets/images
+  /home/maibenben/robomax/think/tutu/app/assets/javascripts
+  /home/maibenben/robomax/think/tutu/app/assets/stylesheets
+  /home/maibenben/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/twitter-bootstrap-rails-5.0.0/app/assets/fonts
+  /home/maibenben/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/twitter-bootstrap-rails-5.0.0/app/assets/javascripts
+  /home/maibenben/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/twitter-bootstrap-rails-5.0.0/app/assets/stylesheets
+  /home/maibenben/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/twitter-bootstrap-rails-5.0.0/vendor/assets/stylesheets
+  /home/maibenben/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/actioncable-6.1.5.1/app/assets/javascripts
+  /home/maibenben/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activestorage-6.1.5.1/app/assets/javascripts
+  /home/maibenben/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/actionview-6.1.5.1/lib/assets/compiled
+  /home/maibenben/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/maibenben/robomax/think/tutu/node_modules):
+    24:     <!-- For all other devices -->
+    25:     <!-- Size should be 32 x 32 pixels -->
+    26:     
+    27:     <%= javascript_include_tag "application" %>
+    28: 
+    29:     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    30:     <!--[if lt IE 9]>
+  
+app/assets/javascripts/application.js:7
+app/views/layouts/application.html.erb:27
+Started GET "/" for 127.0.0.1 at 2022-06-09 13:29:27 +0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 260)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | Allocations: 5537)
+Completed 200 OK in 22ms (Views: 19.6ms | ActiveRecord: 0.0ms | Allocations: 6779)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-06-09 13:29:30 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.9ms | Allocations: 709)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 21.6ms | Allocations: 5707)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 32.1ms | Allocations: 10542)
+Completed 200 OK in 54ms (Views: 35.5ms | ActiveRecord: 0.9ms | Allocations: 18651)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-06-09 13:29:32 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"13@13.13", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "13@13.13"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 327ms (ActiveRecord: 0.8ms | Allocations: 4742)
+
+
+Started GET "/" for 127.0.0.1 at 2022-06-09 13:29:32 +0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 135)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:18
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 5874)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.3ms | Allocations: 6267)
+
+
+Started GET "/" for 127.0.0.1 at 2022-06-09 13:31:36 +0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 265)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+  Rendered layout layouts/application.html.erb (Duration: 16.7ms | Allocations: 6419)
+Completed 200 OK in 23ms (Views: 20.0ms | ActiveRecord: 0.2ms | Allocations: 7709)
+
+
+Started GET "/path2" for 127.0.0.1 at 2022-06-09 13:31:41 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/path2"):
+  
+Started GET "/" for 127.0.0.1 at 2022-06-09 13:31:43 +0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 131)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 5885)
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.2ms | Allocations: 6271)
+
+
+Started GET "/" for 127.0.0.1 at 2022-06-09 13:32:02 +0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 263)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 1655)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 2917)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html>
+  <head>
+    <title>Tutu</title> 
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <div class="navbar navbar-default navbar-static-top">
+    <div class="container">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Tutu</a>
+      <div class="navbar-collapse collapse navbar-responsive-collapse">
+        <ul class="nav navbar-nav">
+          <li><%= link_to "Link1", #  %></li>
+          <li><%= link_to "Link2", #  %></li>
+          <li><%= link_to "Link3", #  %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+    <p id="notice" class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
+    <% if user_signed_in? %>
+
+      <p> Аккауннт: <%= current_user.email %></p>
+      <%= link_to 'Выйти', destroy_user_session_path, method: :delete %>
+    <% else %>
+      <%= link_to 'Вход', new_user_session_path %>
+    <% end %>
+
+
+    <%= yield %>
+    <br><br><br><br>
+    <%= link_to 'На главную',  root_path %>
+    <br>
+    <%= link_to 'КУПИТЬ БИЛЕТ',  search_path %>    
+  </body>
+</html>
+
+):
+1:    <!DOCTYPE html>
+2:    <html>
+3:      <head>
+4:        <title>Tutu</title> 
+5:        <meta name="viewport" content="width=device-width,initial-scale=1">
+6:        <%= csrf_meta_tags %>
+7:        <%= csp_meta_tag %>
+8:    
+9:        <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+10:        <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+11:      </head>
+12:    
+13:      <body>
+14:      <div class="navbar navbar-default navbar-static-top">
+15:        <div class="container">
+16:          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+17:            <span class="icon-bar"></span>
+18:            <span class="icon-bar"></span>
+19:            <span class="icon-bar"></span>
+20:          </button>
+21:          <a class="navbar-brand" href="#">Tutu</a>
+22:          <div class="navbar-collapse collapse navbar-responsive-collapse">
+23:            <ul class="nav navbar-nav">
+24:              <li><%= link_to "Link1", #  %></li>
+25:              <li><%= link_to "Link2", #  %></li>
+26:              <li><%= link_to "Link3", #  %></li>
+27:            </ul>
+28:          </div>
+29:        </div>
+30:      </div>
+31:        <p id="notice" class="notice"><%= notice %></p>
+32:        <p class="alert"><%= alert %></p>
+33:    
+34:        <% if user_signed_in? %>
+35:    
+36:          <p> Аккауннт: <%= current_user.email %></p>
+37:          <%= link_to 'Выйти', destroy_user_session_path, method: :delete %>
+38:        <% else %>
+39:          <%= link_to 'Вход', new_user_session_path %>
+40:        <% end %>
+41:    
+42:    
+43:        <%= yield %>
+44:        <br><br><br><br>
+45:        <%= link_to 'На главную',  root_path %>
+46:        <br>
+47:        <%= link_to 'КУПИТЬ БИЛЕТ',  search_path %>    
+48:      </body>
+49:    </html>
+  
+app/views/layouts/application.html.erb:25: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:26: unknown regexp option - l
+app/views/layouts/application.html.erb:27: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:28: unknown regexp options - dv
+app/views/layouts/application.html.erb:29: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:30: unknown regexp options - dv
+app/views/layouts/application.html.erb:31: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:31: syntax error, unexpected `class', expecting ')'
+app/views/layouts/application.html.erb:32: unknown regexp option - p
+app/views/layouts/application.html.erb:36: syntax error, unexpected '<', expecting ')'
+app/views/layouts/application.html.erb:36: syntax error, unexpected ':', expecting ')'
+app/views/layouts/application.html.erb:48: unknown regexp options - bdy
+app/views/layouts/application.html.erb:49: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:52: unterminated regexp meets end of file
+app/views/layouts/application.html.erb:52: syntax error, unexpected end-of-input, expecting ')'
+app/views/layouts/application.html.erb:25: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:26: unknown regexp option - l
+app/views/layouts/application.html.erb:27: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:28: unknown regexp options - dv
+app/views/layouts/application.html.erb:29: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:30: unknown regexp options - dv
+app/views/layouts/application.html.erb:31: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:31: syntax error, unexpected `class', expecting ')'
+app/views/layouts/application.html.erb:32: unknown regexp option - p
+app/views/layouts/application.html.erb:36: syntax error, unexpected '<', expecting ')'
+app/views/layouts/application.html.erb:36: syntax error, unexpected ':', expecting ')'
+app/views/layouts/application.html.erb:48: unknown regexp options - bdy
+app/views/layouts/application.html.erb:49: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:52: unterminated regexp meets end of file
+app/views/layouts/application.html.erb:52: syntax error, unexpected end-of-input, expecting ')'
+app/views/layouts/application.html.erb:25: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:26: unknown regexp option - l
+app/views/layouts/application.html.erb:27: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:28: unknown regexp options - dv
+app/views/layouts/application.html.erb:29: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:30: unknown regexp options - dv
+app/views/layouts/application.html.erb:31: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:31: syntax error, unexpected `class', expecting ')'
+app/views/layouts/application.html.erb:32: unknown regexp option - p
+app/views/layouts/application.html.erb:36: syntax error, unexpected '<', expecting ')'
+app/views/layouts/application.html.erb:36: syntax error, unexpected ':', expecting ')'
+app/views/layouts/application.html.erb:48: unknown regexp options - bdy
+app/views/layouts/application.html.erb:49: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:52: unterminated regexp meets end of file
+app/views/layouts/application.html.erb:52: syntax error, unexpected end-of-input, expecting ')'
+app/views/layouts/application.html.erb:25: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:26: unknown regexp option - l
+app/views/layouts/application.html.erb:27: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:28: unknown regexp options - dv
+app/views/layouts/application.html.erb:29: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:30: unknown regexp options - dv
+app/views/layouts/application.html.erb:31: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:31: syntax error, unexpected `class', expecting ')'
+app/views/layouts/application.html.erb:32: unknown regexp option - p
+app/views/layouts/application.html.erb:36: syntax error, unexpected '<', expecting ')'
+app/views/layouts/application.html.erb:36: syntax error, unexpected ':', expecting ')'
+app/views/layouts/application.html.erb:48: unknown regexp options - bdy
+app/views/layouts/application.html.erb:49: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:52: unterminated regexp meets end of file
+app/views/layouts/application.html.erb:52: syntax error, unexpected end-of-input, expecting ')'
+app/views/layouts/application.html.erb:25: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:26: unknown regexp option - l
+app/views/layouts/application.html.erb:27: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:28: unknown regexp options - dv
+app/views/layouts/application.html.erb:29: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:30: unknown regexp options - dv
+app/views/layouts/application.html.erb:31: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:31: syntax error, unexpected `class', expecting ')'
+app/views/layouts/application.html.erb:32: unknown regexp option - p
+app/views/layouts/application.html.erb:36: syntax error, unexpected '<', expecting ')'
+app/views/layouts/application.html.erb:36: syntax error, unexpected ':', expecting ')'
+app/views/layouts/application.html.erb:48: unknown regexp options - bdy
+app/views/layouts/application.html.erb:49: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:52: unterminated regexp meets end of file
+app/views/layouts/application.html.erb:52: syntax error, unexpected end-of-input, expecting ')'
+app/views/layouts/application.html.erb:25: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:26: unknown regexp option - l
+app/views/layouts/application.html.erb:27: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:28: unknown regexp options - dv
+app/views/layouts/application.html.erb:29: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:30: unknown regexp options - dv
+app/views/layouts/application.html.erb:31: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:31: syntax error, unexpected `class', expecting ')'
+app/views/layouts/application.html.erb:32: unknown regexp option - p
+app/views/layouts/application.html.erb:36: syntax error, unexpected '<', expecting ')'
+app/views/layouts/application.html.erb:36: syntax error, unexpected ':', expecting ')'
+app/views/layouts/application.html.erb:48: unknown regexp options - bdy
+app/views/layouts/application.html.erb:49: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:52: unterminated regexp meets end of file
+app/views/layouts/application.html.erb:52: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/" for 127.0.0.1 at 2022-06-09 13:32:21 +0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 260)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 6412)
+Completed 200 OK in 24ms (Views: 20.7ms | ActiveRecord: 0.3ms | Allocations: 7701)
+
+
+Started GET "/admin/railway_stations" for 127.0.0.1 at 2022-06-09 13:40:45 +0300
+Processing by Admin::RailwayStationsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/admin.html.erb
+  Rendering admin/railway_stations/index.html.erb within layouts/admin
+  [1m[36mRailwayStation Load (0.3ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations"[0m
+  ↳ app/views/admin/railway_stations/index.html.erb:15
+  Rendered admin/railway_stations/index.html.erb within layouts/admin (Duration: 17.9ms | Allocations: 6167)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/admin.html.erb (Duration: 29.6ms | Allocations: 11297)
+Completed 200 OK in 46ms (Views: 29.8ms | ActiveRecord: 2.2ms | Allocations: 16045)
+
+
+Started GET "/search" for 127.0.0.1 at 2022-06-09 13:40:50 +0300
+Processing by SearchesController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering searches/show.html.erb within layouts/application
+  Rendered searches/show.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1657)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 1721)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 2906)
+
+
+  
+ActionView::Template::Error (uninitialized constant #<Class:0x00007f108c082d90>::RailwayStations):
+    10:   <div class="row"
+    11:     <%= form_tag search_path do %>
+    12:       <div class="col-md-4>
+    13:         <%= select_tag :start_station, options_form_collection_for_select(RailwayStations.all, :id, :title) %>
+    14:       </div>      
+    15: 
+    16:       <div class="col-md-4>
+  
+app/views/searches/show.html.erb:13
+app/views/searches/show.html.erb:11
+Started GET "/search" for 127.0.0.1 at 2022-06-09 13:41:54 +0300
+Processing by SearchesController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering searches/show.html.erb within layouts/application
+  Rendered searches/show.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1768)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 1832)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 3093)
+
+
+  
+ActionView::Template::Error (undefined method `all' for nil:NilClass):
+    10:   <div class="row"
+    11:     <%= form_tag search_path do %>
+    12:       <div class="col-md-4>
+    13:         <%= select_tag :start_station, options_form_collection_for_select(@RailwayStations.all, :id, :title) %>
+    14:       </div>      
+    15: 
+    16:       <div class="col-md-4>
+  
+app/views/searches/show.html.erb:13
+app/views/searches/show.html.erb:11
+Started GET "/search" for 127.0.0.1 at 2022-06-09 13:43:18 +0300
+Processing by SearchesController#show as HTML
+Completed 500 Internal Server Error in 8ms (Allocations: 2546)
+
+
+  
+NameError (uninitialized constant SearchesController::RailwayStations):
+  
+app/controllers/searches_controller.rb:4:in `show'
+Started GET "/search" for 127.0.0.1 at 2022-06-09 13:45:46 +0300
+Processing by SearchesController#show as HTML
+Completed 500 Internal Server Error in 6ms (Allocations: 2578)
+
+
+  
+NameError (uninitialized constant SearchesController::RailwayStations):
+  
+app/controllers/searches_controller.rb:4:in `show'
+Started GET "/search" for 127.0.0.1 at 2022-06-09 13:46:07 +0300
+Processing by SearchesController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering searches/show.html.erb within layouts/application
+  Rendered searches/show.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1657)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 1721)
+Completed 500 Internal Server Error in 8ms (Allocations: 2987)
+
+
+  
+ActionView::Template::Error (uninitialized constant #<Class:0x0000555a2702f388>::RailwayStations):
+    10:   <div class="row"
+    11:     <%= form_tag search_path do %>
+    12:       <div class="col-md-4>
+    13:         <%= select_tag :start_station, options_form_collection_for_select(RailwayStations.all, :id, :title) %>
+    14:       </div>      
+    15: 
+    16:       <div class="col-md-4>
+  
+app/views/searches/show.html.erb:13
+app/views/searches/show.html.erb:11
+Started GET "/search" for 127.0.0.1 at 2022-06-09 13:47:24 +0300
+Processing by SearchesController#show as HTML
+Completed 500 Internal Server Error in 13ms (Allocations: 2544)
+
+
+  
+NameError (uninitialized constant SearchesController::RailwayStations):
+  
+app/controllers/searches_controller.rb:4:in `show'
+Started GET "/search" for 127.0.0.1 at 2022-06-09 13:48:48 +0300
+  
+SyntaxError (/home/maibenben/robomax/think/tutu/app/controllers/searches_controller.rb:7: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/searches_controller.rb:7: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/searches_controller.rb:7: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/searches_controller.rb:7: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/search" for 127.0.0.1 at 2022-06-09 13:49:00 +0300
+Processing by SearchesController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering searches/show.html.erb within layouts/application
+  Rendered searches/show.html.erb within layouts/application (Duration: 26.3ms | Allocations: 4643)
+  Rendered layout layouts/application.html.erb (Duration: 26.7ms | Allocations: 4707)
+Completed 500 Internal Server Error in 36ms (Allocations: 7534)
+
+
+  
+ActionView::Template::Error (undefined method `options_form_collection_for_select' for #<ActionView::Base:0x0000000001afb8>
+Did you mean?  options_from_collection_for_select
+               option_groups_from_collection_for_select):
+    10:   <div class="row"
+    11:     <%= form_tag search_path do %>
+    12:       <div class="col-md-4>
+    13:         <%= select_tag :start_station, options_form_collection_for_select(@stations, :id, :title) %>
+    14:       </div>      
+    15: 
+    16:       <div class="col-md-4>
+  
+app/views/searches/show.html.erb:13
+app/views/searches/show.html.erb:11
+Started GET "/search" for 127.0.0.1 at 2022-06-09 13:49:33 +0300
+Processing by SearchesController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering searches/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/searches/show.html.erb:13
+  [1m[36mRailwayStation Load (0.4ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations"[0m
+  ↳ app/views/searches/show.html.erb:13
+  [1m[36mCACHE RailwayStation Load (0.0ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations"[0m
+  ↳ app/views/searches/show.html.erb:17
+  Rendered searches/show.html.erb within layouts/application (Duration: 22.1ms | Allocations: 6043)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+  Rendered layout layouts/application.html.erb (Duration: 50.0ms | Allocations: 17674)
+Completed 200 OK in 55ms (Views: 53.2ms | ActiveRecord: 3.1ms | Allocations: 18977)
+
+
+Started GET "/search" for 127.0.0.1 at 2022-06-09 13:49:54 +0300
+Processing by SearchesController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering searches/show.html.erb within layouts/application
+  [1m[36mRailwayStation Load (0.2ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations"[0m
+  ↳ app/views/searches/show.html.erb:12
+  [1m[36mCACHE RailwayStation Load (0.0ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations"[0m
+  ↳ app/views/searches/show.html.erb:16
+  Rendered searches/show.html.erb within layouts/application (Duration: 8.8ms | Allocations: 2867)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+  Rendered layout layouts/application.html.erb (Duration: 24.3ms | Allocations: 9003)
+Completed 200 OK in 28ms (Views: 25.9ms | ActiveRecord: 0.5ms | Allocations: 10298)
+
+
+Started GET "/search" for 127.0.0.1 at 2022-06-09 13:51:19 +0300
+Processing by SearchesController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering searches/show.html.erb within layouts/application
+  [1m[36mRailwayStation Load (0.2ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations"[0m
+  ↳ app/views/searches/show.html.erb:12
+  [1m[36mCACHE RailwayStation Load (0.0ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations"[0m
+  ↳ app/views/searches/show.html.erb:16
+  Rendered searches/show.html.erb within layouts/application (Duration: 9.7ms | Allocations: 2895)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+  Rendered layout layouts/application.html.erb (Duration: 26.1ms | Allocations: 9031)
+Completed 200 OK in 32ms (Views: 29.9ms | ActiveRecord: 0.5ms | Allocations: 10327)
+
+
+Started GET "/search" for 127.0.0.1 at 2022-06-09 13:52:05 +0300
+Processing by SearchesController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering searches/show.html.erb within layouts/application
+  [1m[36mRailwayStation Load (0.3ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations"[0m
+  ↳ app/views/searches/show.html.erb:12
+  [1m[36mCACHE RailwayStation Load (0.1ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations"[0m
+  ↳ app/views/searches/show.html.erb:16
+  Rendered searches/show.html.erb within layouts/application (Duration: 10.8ms | Allocations: 2898)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+  Rendered layout layouts/application.html.erb (Duration: 26.1ms | Allocations: 9036)
+Completed 200 OK in 31ms (Views: 28.3ms | ActiveRecord: 0.7ms | Allocations: 10339)
+
+
+Started GET "/search" for 127.0.0.1 at 2022-06-09 13:52:57 +0300
+Processing by SearchesController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering searches/show.html.erb within layouts/application
+  [1m[36mRailwayStation Load (0.6ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations"[0m
+  ↳ app/views/searches/show.html.erb:12
+  [1m[36mCACHE RailwayStation Load (0.0ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations"[0m
+  ↳ app/views/searches/show.html.erb:16
+  Rendered searches/show.html.erb within layouts/application (Duration: 10.9ms | Allocations: 2895)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+  Rendered layout layouts/application.html.erb (Duration: 25.8ms | Allocations: 9033)
+Completed 200 OK in 32ms (Views: 29.0ms | ActiveRecord: 0.9ms | Allocations: 10336)
+
+
+Started GET "/search" for 127.0.0.1 at 2022-06-09 13:53:20 +0300
+Processing by SearchesController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering searches/show.html.erb within layouts/application
+  [1m[36mRailwayStation Load (0.3ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations"[0m
+  ↳ app/views/searches/show.html.erb:12
+  [1m[36mCACHE RailwayStation Load (0.0ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations"[0m
+  ↳ app/views/searches/show.html.erb:16
+  Rendered searches/show.html.erb within layouts/application (Duration: 8.9ms | Allocations: 2868)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+  Rendered layout layouts/application.html.erb (Duration: 19.0ms | Allocations: 9004)
+Completed 200 OK in 23ms (Views: 21.1ms | ActiveRecord: 0.4ms | Allocations: 10299)
+
+
+Started GET "/search" for 127.0.0.1 at 2022-06-09 13:57:50 +0300
+Processing by SearchesController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering searches/show.html.erb within layouts/application
+  Rendered searches/show.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1298)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 1363)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 2631)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p id="notice"><%= notice %></p>
+
+<p>
+<h1><strong>ПОИСК</strong></h1>
+<br>
+
+<div class="row">
+  <div class="col-md-4"
+    <% select_tag :start_position, oprions_from_collection_for_select(@stations, :id, :title), class: 'form-control' %>
+  </div>
+
+  <div class="col-md-4"
+    <% select_tag :end_position, oprions_from_collection_for_select(@stations, :id, :title), class: 'form-control' %>
+  </div>
+
+  <div class="col-md-4"
+    <%= submit_tag "Найти", class: 'btn btn-primary'
+  </div>
+
+<end>
+
+<form>
+  <div class="row"
+    <%= form_tag search_path do %>
+      <div class="col-md-4>
+        <%= select_tag :start_station, options_from_collection_for_select(@stations, :id, :title) %>
+      </div>      
+
+      <div class="col-md-4>
+        <%= select_tag :end_station, options_from_collection_for_select(@stations.all, :id, :title) %>
+      </div>      
+
+      <div class="col-md-4>
+        <%= submit_tag "НАйти" %>
+      </div>
+
+    <% end %>
+
+  </div>
+</form>
+
+
+
+
+
+
+<p><%= link_to 'Купить билет', tickets_path, method: :post %></p>
+  
+</p>
+
+
+
+):
+1:    <p id="notice"><%= notice %></p>
+2:    
+3:    <p>
+4:    <h1><strong>ПОИСК</strong></h1>
+5:    <br>
+6:    
+7:    <div class="row">
+8:      <div class="col-md-4"
+9:        <% select_tag :start_position, oprions_from_collection_for_select(@stations, :id, :title), class: 'form-control' %>
+10:      </div>
+11:    
+12:      <div class="col-md-4"
+13:        <% select_tag :end_position, oprions_from_collection_for_select(@stations, :id, :title), class: 'form-control' %>
+14:      </div>
+15:    
+16:      <div class="col-md-4"
+17:        <%= submit_tag "Найти", class: 'btn btn-primary'
+18:      </div>
+19:    
+20:    <end>
+21:    
+22:    <form>
+23:      <div class="row"
+24:        <%= form_tag search_path do %>
+25:          <div class="col-md-4>
+26:            <%= select_tag :start_station, options_from_collection_for_select(@stations, :id, :title) %>
+27:          </div>      
+28:    
+29:          <div class="col-md-4>
+30:            <%= select_tag :end_station, options_from_collection_for_select(@stations.all, :id, :title) %>
+31:          </div>      
+32:    
+33:          <div class="col-md-4>
+34:            <%= submit_tag "НАйти" %>
+35:          </div>
+36:    
+37:        <% end %>
+38:    
+39:      </div>
+40:    </form>
+41:    
+42:    
+43:    
+44:    
+45:    
+46:    
+47:    <p><%= link_to 'Купить билет', tickets_path, method: :post %></p>
+48:      
+49:    </p>
+  
+app/views/searches/show.html.erb:18: syntax error, unexpected '<', expecting `end'
+app/views/searches/show.html.erb:27: unknown regexp options - dv
+app/views/searches/show.html.erb:29: syntax error, unexpected '<'
+app/views/searches/show.html.erb:33: syntax error, unexpected local variable or method, expecting `end'
+app/views/searches/show.html.erb:35: syntax error, unexpected '<', expecting `end'
+app/views/searches/show.html.erb:39: unknown regexp options - dv
+app/views/searches/show.html.erb:40: syntax error, unexpected '<'
+app/views/searches/show.html.erb:47: unknown regexp option - p
+app/views/searches/show.html.erb:49: syntax error, unexpected '<'
+app/views/searches/show.html.erb:54: unterminated regexp meets end of file
+app/views/searches/show.html.erb:54: syntax error, unexpected end-of-input, expecting `end'
+app/views/searches/show.html.erb:18: syntax error, unexpected '<', expecting `end'
+app/views/searches/show.html.erb:27: unknown regexp options - dv
+app/views/searches/show.html.erb:29: syntax error, unexpected '<'
+app/views/searches/show.html.erb:33: syntax error, unexpected local variable or method, expecting `end'
+app/views/searches/show.html.erb:35: syntax error, unexpected '<', expecting `end'
+app/views/searches/show.html.erb:39: unknown regexp options - dv
+app/views/searches/show.html.erb:40: syntax error, unexpected '<'
+app/views/searches/show.html.erb:47: unknown regexp option - p
+app/views/searches/show.html.erb:49: syntax error, unexpected '<'
+app/views/searches/show.html.erb:54: unterminated regexp meets end of file
+app/views/searches/show.html.erb:54: syntax error, unexpected end-of-input, expecting `end'
+app/views/searches/show.html.erb:18: syntax error, unexpected '<', expecting `end'
+app/views/searches/show.html.erb:27: unknown regexp options - dv
+app/views/searches/show.html.erb:29: syntax error, unexpected '<'
+app/views/searches/show.html.erb:33: syntax error, unexpected local variable or method, expecting `end'
+app/views/searches/show.html.erb:35: syntax error, unexpected '<', expecting `end'
+app/views/searches/show.html.erb:39: unknown regexp options - dv
+app/views/searches/show.html.erb:40: syntax error, unexpected '<'
+app/views/searches/show.html.erb:47: unknown regexp option - p
+app/views/searches/show.html.erb:49: syntax error, unexpected '<'
+app/views/searches/show.html.erb:54: unterminated regexp meets end of file
+app/views/searches/show.html.erb:54: syntax error, unexpected end-of-input, expecting `end'
+app/views/searches/show.html.erb:18: syntax error, unexpected '<', expecting `end'
+app/views/searches/show.html.erb:27: unknown regexp options - dv
+app/views/searches/show.html.erb:29: syntax error, unexpected '<'
+app/views/searches/show.html.erb:33: syntax error, unexpected local variable or method, expecting `end'
+app/views/searches/show.html.erb:35: syntax error, unexpected '<', expecting `end'
+app/views/searches/show.html.erb:39: unknown regexp options - dv
+app/views/searches/show.html.erb:40: syntax error, unexpected '<'
+app/views/searches/show.html.erb:47: unknown regexp option - p
+app/views/searches/show.html.erb:49: syntax error, unexpected '<'
+app/views/searches/show.html.erb:54: unterminated regexp meets end of file
+app/views/searches/show.html.erb:54: syntax error, unexpected end-of-input, expecting `end'
+app/views/searches/show.html.erb:18: syntax error, unexpected '<', expecting `end'
+app/views/searches/show.html.erb:27: unknown regexp options - dv
+app/views/searches/show.html.erb:29: syntax error, unexpected '<'
+app/views/searches/show.html.erb:33: syntax error, unexpected local variable or method, expecting `end'
+app/views/searches/show.html.erb:35: syntax error, unexpected '<', expecting `end'
+app/views/searches/show.html.erb:39: unknown regexp options - dv
+app/views/searches/show.html.erb:40: syntax error, unexpected '<'
+app/views/searches/show.html.erb:47: unknown regexp option - p
+app/views/searches/show.html.erb:49: syntax error, unexpected '<'
+app/views/searches/show.html.erb:54: unterminated regexp meets end of file
+app/views/searches/show.html.erb:54: syntax error, unexpected end-of-input, expecting `end'
+app/views/searches/show.html.erb:18: syntax error, unexpected '<', expecting `end'
+app/views/searches/show.html.erb:27: unknown regexp options - dv
+app/views/searches/show.html.erb:29: syntax error, unexpected '<'
+app/views/searches/show.html.erb:33: syntax error, unexpected local variable or method, expecting `end'
+app/views/searches/show.html.erb:35: syntax error, unexpected '<', expecting `end'
+app/views/searches/show.html.erb:39: unknown regexp options - dv
+app/views/searches/show.html.erb:40: syntax error, unexpected '<'
+app/views/searches/show.html.erb:47: unknown regexp option - p
+app/views/searches/show.html.erb:49: syntax error, unexpected '<'
+app/views/searches/show.html.erb:54: unterminated regexp meets end of file
+app/views/searches/show.html.erb:54: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/search" for 127.0.0.1 at 2022-06-09 13:58:17 +0300
+Processing by SearchesController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering searches/show.html.erb within layouts/application
+  Rendered searches/show.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1292)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 1357)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 2632)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p id="notice"><%= notice %></p>
+
+<p>
+<h1><strong>ПОИСК</strong></h1>
+<br>
+
+<div class="row">
+  <div class="col-md-4">
+    <% select_tag :start_position, oprions_from_collection_for_select(@stations, :id, :title), class: 'form-control' %>
+  </div>
+
+  <div class="col-md-4">
+    <% select_tag :end_position, oprions_from_collection_for_select(@stations, :id, :title), class: 'form-control' %>
+  </div>
+
+  <div class="col-md-4">
+    <%= submit_tag "Найти", class: 'btn btn-primary'
+  </div> 
+
+<end>
+
+<form>
+  <div class="row"
+    <%= form_tag search_path do %>
+      <div class="col-md-4>
+        <%= select_tag :start_station, options_from_collection_for_select(@stations, :id, :title) %>
+      </div>      
+
+      <div class="col-md-4>
+        <%= select_tag :end_station, options_from_collection_for_select(@stations.all, :id, :title) %>
+      </div>      
+
+      <div class="col-md-4>
+        <%= submit_tag "НАйти" %>
+      </div>
+
+    <% end %>
+
+  </div>
+</form>
+
+
+
+
+
+
+<p><%= link_to 'Купить билет', tickets_path, method: :post %></p>
+  
+</p>
+
+
+
+):
+1:    <p id="notice"><%= notice %></p>
+2:    
+3:    <p>
+4:    <h1><strong>ПОИСК</strong></h1>
+5:    <br>
+6:    
+7:    <div class="row">
+8:      <div class="col-md-4">
+9:        <% select_tag :start_position, oprions_from_collection_for_select(@stations, :id, :title), class: 'form-control' %>
+10:      </div>
+11:    
+12:      <div class="col-md-4">
+13:        <% select_tag :end_position, oprions_from_collection_for_select(@stations, :id, :title), class: 'form-control' %>
+14:      </div>
+15:    
+16:      <div class="col-md-4">
+17:        <%= submit_tag "Найти", class: 'btn btn-primary'
+18:      </div> 
+19:    
+20:    <end>
+21:    
+22:    <form>
+23:      <div class="row"
+24:        <%= form_tag search_path do %>
+25:          <div class="col-md-4>
+26:            <%= select_tag :start_station, options_from_collection_for_select(@stations, :id, :title) %>
+27:          </div>      
+28:    
+29:          <div class="col-md-4>
+30:            <%= select_tag :end_station, options_from_collection_for_select(@stations.all, :id, :title) %>
+31:          </div>      
+32:    
+33:          <div class="col-md-4>
+34:            <%= submit_tag "НАйти" %>
+35:          </div>
+36:    
+37:        <% end %>
+38:    
+39:      </div>
+40:    </form>
+41:    
+42:    
+43:    
+44:    
+45:    
+46:    
+47:    <p><%= link_to 'Купить билет', tickets_path, method: :post %></p>
+48:      
+49:    </p>
+  
+app/views/searches/show.html.erb:18: syntax error, unexpected '<', expecting `end'
+app/views/searches/show.html.erb:27: unknown regexp options - dv
+app/views/searches/show.html.erb:29: syntax error, unexpected '<'
+app/views/searches/show.html.erb:33: syntax error, unexpected local variable or method, expecting `end'
+app/views/searches/show.html.erb:35: syntax error, unexpected '<', expecting `end'
+app/views/searches/show.html.erb:39: unknown regexp options - dv
+app/views/searches/show.html.erb:40: syntax error, unexpected '<'
+app/views/searches/show.html.erb:47: unknown regexp option - p
+app/views/searches/show.html.erb:49: syntax error, unexpected '<'
+app/views/searches/show.html.erb:54: unterminated regexp meets end of file
+app/views/searches/show.html.erb:54: syntax error, unexpected end-of-input, expecting `end'
+app/views/searches/show.html.erb:18: syntax error, unexpected '<', expecting `end'
+app/views/searches/show.html.erb:27: unknown regexp options - dv
+app/views/searches/show.html.erb:29: syntax error, unexpected '<'
+app/views/searches/show.html.erb:33: syntax error, unexpected local variable or method, expecting `end'
+app/views/searches/show.html.erb:35: syntax error, unexpected '<', expecting `end'
+app/views/searches/show.html.erb:39: unknown regexp options - dv
+app/views/searches/show.html.erb:40: syntax error, unexpected '<'
+app/views/searches/show.html.erb:47: unknown regexp option - p
+app/views/searches/show.html.erb:49: syntax error, unexpected '<'
+app/views/searches/show.html.erb:54: unterminated regexp meets end of file
+app/views/searches/show.html.erb:54: syntax error, unexpected end-of-input, expecting `end'
+app/views/searches/show.html.erb:18: syntax error, unexpected '<', expecting `end'
+app/views/searches/show.html.erb:27: unknown regexp options - dv
+app/views/searches/show.html.erb:29: syntax error, unexpected '<'
+app/views/searches/show.html.erb:33: syntax error, unexpected local variable or method, expecting `end'
+app/views/searches/show.html.erb:35: syntax error, unexpected '<', expecting `end'
+app/views/searches/show.html.erb:39: unknown regexp options - dv
+app/views/searches/show.html.erb:40: syntax error, unexpected '<'
+app/views/searches/show.html.erb:47: unknown regexp option - p
+app/views/searches/show.html.erb:49: syntax error, unexpected '<'
+app/views/searches/show.html.erb:54: unterminated regexp meets end of file
+app/views/searches/show.html.erb:54: syntax error, unexpected end-of-input, expecting `end'
+app/views/searches/show.html.erb:18: syntax error, unexpected '<', expecting `end'
+app/views/searches/show.html.erb:27: unknown regexp options - dv
+app/views/searches/show.html.erb:29: syntax error, unexpected '<'
+app/views/searches/show.html.erb:33: syntax error, unexpected local variable or method, expecting `end'
+app/views/searches/show.html.erb:35: syntax error, unexpected '<', expecting `end'
+app/views/searches/show.html.erb:39: unknown regexp options - dv
+app/views/searches/show.html.erb:40: syntax error, unexpected '<'
+app/views/searches/show.html.erb:47: unknown regexp option - p
+app/views/searches/show.html.erb:49: syntax error, unexpected '<'
+app/views/searches/show.html.erb:54: unterminated regexp meets end of file
+app/views/searches/show.html.erb:54: syntax error, unexpected end-of-input, expecting `end'
+app/views/searches/show.html.erb:18: syntax error, unexpected '<', expecting `end'
+app/views/searches/show.html.erb:27: unknown regexp options - dv
+app/views/searches/show.html.erb:29: syntax error, unexpected '<'
+app/views/searches/show.html.erb:33: syntax error, unexpected local variable or method, expecting `end'
+app/views/searches/show.html.erb:35: syntax error, unexpected '<', expecting `end'
+app/views/searches/show.html.erb:39: unknown regexp options - dv
+app/views/searches/show.html.erb:40: syntax error, unexpected '<'
+app/views/searches/show.html.erb:47: unknown regexp option - p
+app/views/searches/show.html.erb:49: syntax error, unexpected '<'
+app/views/searches/show.html.erb:54: unterminated regexp meets end of file
+app/views/searches/show.html.erb:54: syntax error, unexpected end-of-input, expecting `end'
+app/views/searches/show.html.erb:18: syntax error, unexpected '<', expecting `end'
+app/views/searches/show.html.erb:27: unknown regexp options - dv
+app/views/searches/show.html.erb:29: syntax error, unexpected '<'
+app/views/searches/show.html.erb:33: syntax error, unexpected local variable or method, expecting `end'
+app/views/searches/show.html.erb:35: syntax error, unexpected '<', expecting `end'
+app/views/searches/show.html.erb:39: unknown regexp options - dv
+app/views/searches/show.html.erb:40: syntax error, unexpected '<'
+app/views/searches/show.html.erb:47: unknown regexp option - p
+app/views/searches/show.html.erb:49: syntax error, unexpected '<'
+app/views/searches/show.html.erb:54: unterminated regexp meets end of file
+app/views/searches/show.html.erb:54: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/search" for 127.0.0.1 at 2022-06-09 13:58:50 +0300
+Processing by SearchesController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering searches/show.html.erb within layouts/application
+  Rendered searches/show.html.erb within layouts/application (Duration: 27.7ms | Allocations: 4687)
+  Rendered layout layouts/application.html.erb (Duration: 28.3ms | Allocations: 4751)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.0ms | Allocations: 6025)
+
+
+  
+ActionView::Template::Error (undefined method `oprions_from_collection_for_select' for #<ActionView::Base:0x0000000001c3b8>
+Did you mean?  options_from_collection_for_select
+               option_groups_from_collection_for_select):
+     6: 
+     7: <div class="row">
+     8:   <div class="col-md-4">
+     9:     <% select_tag :start_position, oprions_from_collection_for_select(@stations, :id, :title), class: 'form-control' %>
+    10:   </div>
+    11: 
+    12:   <div class="col-md-4">
+  
+app/views/searches/show.html.erb:9
+Started GET "/search" for 127.0.0.1 at 2022-06-09 13:59:21 +0300
+Processing by SearchesController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering searches/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/searches/show.html.erb:9
+  [1m[36mRailwayStation Load (0.3ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations"[0m
+  ↳ app/views/searches/show.html.erb:9
+  [1m[36mCACHE RailwayStation Load (0.0ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations"[0m
+  ↳ app/views/searches/show.html.erb:30
+  Rendered searches/show.html.erb within layouts/application (Duration: 13.4ms | Allocations: 4564)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+  Rendered layout layouts/application.html.erb (Duration: 28.8ms | Allocations: 10733)
+Completed 200 OK in 34ms (Views: 31.1ms | ActiveRecord: 1.2ms | Allocations: 12035)
+
+
+Started GET "/search" for 127.0.0.1 at 2022-06-09 13:59:34 +0300
+Processing by SearchesController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering searches/show.html.erb within layouts/application
+  [1m[36mRailwayStation Load (0.6ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations"[0m
+  ↳ app/views/searches/show.html.erb:9
+  [1m[36mCACHE RailwayStation Load (0.0ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations"[0m
+  ↳ app/views/searches/show.html.erb:30
+  Rendered searches/show.html.erb within layouts/application (Duration: 13.2ms | Allocations: 3840)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+  Rendered layout layouts/application.html.erb (Duration: 29.5ms | Allocations: 9976)
+Completed 200 OK in 35ms (Views: 31.8ms | ActiveRecord: 0.8ms | Allocations: 11271)
+
+
+Started GET "/search" for 127.0.0.1 at 2022-06-09 14:00:31 +0300
+Processing by SearchesController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering searches/show.html.erb within layouts/application
+  [1m[36mRailwayStation Load (0.3ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations"[0m
+  ↳ app/views/searches/show.html.erb:9
+  [1m[36mCACHE RailwayStation Load (0.1ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations"[0m
+  ↳ app/views/searches/show.html.erb:30
+  Rendered searches/show.html.erb within layouts/application (Duration: 14.3ms | Allocations: 3838)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+  Rendered layout layouts/application.html.erb (Duration: 30.1ms | Allocations: 9974)
+Completed 200 OK in 37ms (Views: 33.4ms | ActiveRecord: 0.7ms | Allocations: 11269)
+
+
+Started GET "/search" for 127.0.0.1 at 2022-06-09 14:00:47 +0300
+Processing by SearchesController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering searches/show.html.erb within layouts/application
+  [1m[36mRailwayStation Load (0.2ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations"[0m
+  ↳ app/views/searches/show.html.erb:9
+  [1m[36mCACHE RailwayStation Load (0.0ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations"[0m
+  ↳ app/views/searches/show.html.erb:30
+  Rendered searches/show.html.erb within layouts/application (Duration: 11.1ms | Allocations: 3839)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+  Rendered layout layouts/application.html.erb (Duration: 32.5ms | Allocations: 9977)
+Completed 200 OK in 38ms (Views: 34.8ms | ActiveRecord: 0.5ms | Allocations: 11273)
+
+
+Started GET "/search" for 127.0.0.1 at 2022-06-09 14:01:49 +0300
+Processing by SearchesController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering searches/show.html.erb within layouts/application
+  [1m[36mRailwayStation Load (0.2ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations"[0m
+  ↳ app/views/searches/show.html.erb:10
+  [1m[36mCACHE RailwayStation Load (0.0ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations"[0m
+  ↳ app/views/searches/show.html.erb:32
+  Rendered searches/show.html.erb within layouts/application (Duration: 11.4ms | Allocations: 4036)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+  Rendered layout layouts/application.html.erb (Duration: 26.2ms | Allocations: 10172)
+Completed 200 OK in 32ms (Views: 28.3ms | ActiveRecord: 0.6ms | Allocations: 11474)
+
+
+Started GET "/search" for 127.0.0.1 at 2022-06-09 14:02:29 +0300
+Processing by SearchesController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering searches/show.html.erb within layouts/application
+  [1m[36mRailwayStation Load (0.2ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations"[0m
+  ↳ app/views/searches/show.html.erb:10
+  [1m[36mCACHE RailwayStation Load (0.0ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations"[0m
+  ↳ app/views/searches/show.html.erb:32
+  Rendered searches/show.html.erb within layouts/application (Duration: 11.8ms | Allocations: 4030)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+  Rendered layout layouts/application.html.erb (Duration: 24.9ms | Allocations: 10166)
+Completed 200 OK in 32ms (Views: 28.7ms | ActiveRecord: 0.4ms | Allocations: 11461)
+
+
+Started GET "/search" for 127.0.0.1 at 2022-06-09 14:02:45 +0300
+Processing by SearchesController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering searches/show.html.erb within layouts/application
+  [1m[36mRailwayStation Load (0.5ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations"[0m
+  ↳ app/views/searches/show.html.erb:10
+  [1m[36mCACHE RailwayStation Load (0.1ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations"[0m
+  ↳ app/views/searches/show.html.erb:32
+  Rendered searches/show.html.erb within layouts/application (Duration: 13.4ms | Allocations: 3842)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+  Rendered layout layouts/application.html.erb (Duration: 27.4ms | Allocations: 9978)
+Completed 200 OK in 33ms (Views: 29.8ms | ActiveRecord: 0.7ms | Allocations: 11273)
+
+
+Started GET "/search" for 127.0.0.1 at 2022-06-09 14:02:59 +0300
+Processing by SearchesController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering searches/show.html.erb within layouts/application
+  [1m[36mRailwayStation Load (0.4ms)[0m  [1m[34mSELECT "railway_stations".* FROM "railway_stations"[0m
+  ↳ app/views/searches/show.html.erb:10
+  Rendered searches/show.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1999)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+  Rendered layout layouts/application.html.erb (Duration: 18.6ms | Allocations: 8136)
+Completed 200 OK in 24ms (Views: 20.3ms | ActiveRecord: 0.6ms | Allocations: 9431)
+
+
